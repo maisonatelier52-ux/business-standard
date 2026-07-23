@@ -47,7 +47,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
 
   const initialComments = getComments(article.slug);
 
-  const shareUrl = encodeURIComponent(`https://my-api-usa.com/ramshad/Business-Standard/${article.categorySlug}/${article.slug}`);
+  const shareUrl = encodeURIComponent(`/${article.categorySlug}/${article.slug}`);
   const shareTitle = encodeURIComponent(article.title);
 
   return (
