@@ -1,0 +1,81 @@
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'About Us | Business Standard',
+  description: 'Learn about Business Standard, our history, mission, and editorial independence.',
+};
+
+export default function AboutPage() {
+  return (
+    <div className="max-w-[1200px] mx-auto px-4 md:px-6">
+      <div className="mt-6">
+        
+        {/* Breadcrumb */}
+        <div className="text-sm text-gray-500 mb-4">
+          <Link href="/" className="text-red-600 hover:underline">
+            Home
+          </Link>{' '}
+          / About Us
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          {/* Main Content */}
+          <div className="md:col-span-2">
+            <div className="border-b pb-2 mb-4">
+              <h1 className="text-2xl md:text-3xl font-bold">
+                About Business Standard
+              </h1>
+              <div className="w-28 h-[2px] bg-red-600 mt-2"></div>
+            </div>
+
+            <div className="text-[18px] leading-8 text-gray-900 space-y-6">
+              <p>
+                Business Standard is a leading independent news publication covering global economic, political, financial, and business developments.
+              </p>
+
+              <h2 className="text-xl font-bold mt-6">Our Mission</h2>
+              <p>
+                To deliver rigorous, analytical, and objective news that empowers investors, policy makers, and readers worldwide to make informed decisions.
+              </p>
+
+              <h2 className="text-xl font-bold mt-6">Editorial Independence</h2>
+              <p>
+                Our newsroom operates with complete autonomy, adhering strictly to journalistic ethics, factual integrity, and transparent reporting.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Sidebar */}
+          <div>
+            <div className="border p-5 mb-6">
+              <h3 className="text-lg font-bold border-b pb-2 mb-3">
+                Editorial Desk
+              </h3>
+              <p className="text-sm mb-3">
+                Have an inquiry or editorial tip for our newsroom?
+              </p>
+              <p className="text-red-600 font-semibold mb-1 flex items-center gap-1.5">
+                <svg className="w-4 h-4 text-red-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                editor@businessstandard.com
+              </p>
+            </div>
+
+            <div className="bg-gray-100 p-4 text-sm border">
+              <span className="font-semibold">Related Links</span>
+              <ul className="mt-2 space-y-1">
+                <li><Link href="/privacy-policy" className="text-red-600 hover:underline">Privacy Policy</Link></li>
+                <li><Link href="/terms-and-conditions" className="text-red-600 hover:underline">Terms & Conditions</Link></li>
+                <li><Link href="/our-team" className="text-red-600 hover:underline">Our Team</Link></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  );
+}

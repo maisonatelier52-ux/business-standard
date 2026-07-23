@@ -1,0 +1,458 @@
+@media (max-width: 768px) {
+  .news-feature-block-images {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .news-feature-block-img.large {
+    grid-row: span 1;
+  }
+
+  .news-feature-block-title {
+    font-size: 24px;
+  }
+
+  .news-feature-block-content h2 {
+    font-size: 20px;
+  }
+  .epaper {
+    display: none;
+  }
+  .e-book{
+    display: none;
+  }
+  .log{
+    display: none;
+  }
+  .tp-grid{
+    display: block;
+  }
+  .news-block{
+    display: block;
+  }
+  .news-war-main{
+    display: block;
+  }
+  .this-is-four-column-layout{
+    display: block;
+  }
+  .grid-master{
+    display: block;
+  }
+  .jp-grid{
+    display: block;
+  }
+  .adver{
+    margin-left: 1px;
+  }
+  .envx-grid {
+    display: block;
+  }
+  .fv-grid{
+    display: block;
+  }
+  .fs-grid{
+    display: block;
+  }
+.footer-top{
+    display: block;
+    grid-template-columns:repeat(5, 1fr);
+}
+.footer img{
+    width: 290px;
+    margin-top: 20px;
+}
+.adver img{
+    width: 250px;
+    margin-left: 54px;
+}
+.logo img{
+    width: 250px;
+}
+.nx-grid{
+    display: block;
+}
+.scx-heading{
+    margin-left: 2px;
+}
+.scx-grid {
+    display: block;
+}
+.scx-img{
+    margin-top: 20px;
+}
+.envx-text-block {
+    margin-bottom: 10px;
+}
+.envx-ad{
+    margin-top: 20px;
+}
+.fv-header{
+    display: block;
+}
+.fv-main-img img{
+    height: auto;
+}
+.fv-main-title {
+    font-size: 20px;
+}
+.fv-text {
+    margin-top: 1px;
+    font-size: 12px;
+}
+.card:nth-child(1),.card:nth-child(2),.card:nth-child(3),.card:nth-child(4),.card:nth-child(5){
+    transform: none;
+}
+.cards-track{
+    display: block;
+}
+.card {
+    width: 340px;
+}
+.card:nth-child(2){
+    margin-left: 20px;
+}
+
+  /* ── Header fixes ─────────────────────────────────── */
+
+  /* Topbar: shrink font, reduce padding on mobile */
+  .topbar {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  /* Logo: smaller on mobile */
+  .logo {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+
+  /* Navbar: stack hamburger+search on left, nav-links below */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 12px 0;
+    gap: 0;
+  }
+
+  /* Reset the desktop absolute-centering trick on nav-links */
+  .nav-links {
+    position: static;
+    transform: none;
+    left: auto;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    display: flex;
+    gap: 15px;
+    padding: 8px 0 6px;
+    margin-left: 0;
+    border-top: 1px solid #eee;
+    margin-top: 6px;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    flex: 0 0 auto;
+    font-size: 13px;
+  }
+
+  /* Hide scrollbar for cleaner look */
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* nav-left row: hamburger + search side by side */
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  /* Search button: no extra top margin needed anymore */
+  .search {
+    margin-top: 0;
+  }
+
+  /* Search dropdown: full width under navbar */
+  .search-dropdown {
+    left: 0;
+    right: 0;
+  }
+  /* ── End header fixes ─────────────────────────────── */
+
+  .tp-wrapper{
+    padding: 10px;
+  }
+  .thumb-box img{
+    width: 100%;
+  }
+  .tp-right{
+    margin-top: 20px;
+  }
+  .img-sec img{
+    width: 100%;
+  }
+  .news-war-center{
+    margin-top: 20px;
+  }
+  .news-war-right-item {
+    margin-top: 20px;
+  }
+  .this-is-image-holder{
+    margin-top: 20px;
+  }
+  .big-headline{
+    font-size: 18px;
+  }
+  .jp-title{
+    font-size: 18px;
+  }
+  .carousel-wrapper,.section-title {
+    display: none;
+  }
+  .fs-wrap{
+    padding: 10px;
+  }
+  .footer{
+    padding: 10px;
+    margin-top: 20px;
+  }
+  .footer-bottom {
+    display: block;
+  }
+  .category-and-set-grid {
+    display: block;
+  }
+  .row-news {
+    display: block;
+  }
+  .adv{
+    display: none;
+  }
+  .det-final-part-grid{
+    display: block;
+  }
+  .category-and-set-header h2 {
+    font-size: 13px;
+  }
+  .category-and-set-dropdown{
+    font-size: 12px;
+  }
+  .category-and-set-menu {
+    gap:12px;
+    margin: 5px;
+  }
+  .wrap-main {
+    padding: 5px;
+  }
+  .title-head {
+    font-size: 13px;
+  }
+  .det-final-part-title {
+    font-size: 11px;
+  }
+  .col:not(:last-child){
+    border-right: none;
+  }
+  .nx-wrap{
+    padding: 0px;
+  }
+  .detail-container{
+    display: block;
+    padding: 10px;
+  }
+  .wrapperX{
+    display: block;
+  }
+  .adSectionWrap{
+    display: none;
+  }
+  .gridThreeX{
+    display: block;
+  }
+  .gridTwoX {
+    display: block;
+  }
+  .detail-subscribe-box{
+    padding: 10px;
+  }
+  .promoBoxZ {
+    width: 90%;
+    min-height: auto;
+  }
+  .articleZone{
+    padding: 10px;
+  }
+  .thumbWrapX img{
+    padding: 10px;
+  }
+  .menu-hindu-items-bottom{
+    display: block;
+    margin-top: 20px;
+  }
+  .menu-hindu-items-icons{
+    margin-top: 20px;
+  }
+  .static-page-wrapper {
+    padding: 0 16px 60px;
+  }
+ 
+  .static-page-title {
+    font-size: 28px;
+  }
+ 
+  .static-page-lead {
+    font-size: 15px;
+  }
+ 
+  .static-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  .static-contact-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .static-page-body h2 {
+    font-size: 19px;
+  }
+    .author-profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .author-profile-name { font-size: 26px; }
+  .author-profile-bio  { font-size: 13px; margin: 0 auto 16px; }
+  .author-profile-footer {
+    justify-content: center;
+  }
+  .author-avatar { width: 110px; height: 110px; }
+  .author-article-item { flex-direction: column; }
+  .author-article-img  { width: 100%; height: 200px; }
+  .author-filter-tab   { padding: 10px 12px; font-size: 11px; }
+  .author-body-layout  { padding: 20px 14px 40px; }
+  .author-hero-inner   { padding: 0 14px; }
+  .author-feat-title   { font-size: 20px; }
+  
+  .cat-item { flex-direction: column; }
+  .cat-item-img img { width: 100%; height: 200px; }
+  .search-dropdown-form input[type="search"] { font-size: 14px; }
+  .search-title { font-size: 20px; }
+  
+  /* ── Mega Menu ─────────────────────────────── */
+
+  /* Menu drawer: full screen on mobile */
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 9999;
+    padding: 0;
+  }
+
+  /* Logo inside menu */
+  .menu .logo {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .menu .logo img {
+    width: 180px;
+    height: auto;
+  }
+
+  /* Close button position */
+  .menu-close {
+    top: 14px;
+    right: 16px;
+    font-size: 22px;
+    background: none;
+    border: none;
+  }
+
+  /* Container padding */
+  .menu-hindu-items-container {
+    padding: 16px;
+  }
+
+  /* Search row */
+  .menu-hindu-items-top {
+    margin-bottom: 16px;
+  }
+
+  /* Grid: 2 columns instead of 6 */
+  .menu-hindu-items-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px 20px;
+  }
+
+  /* Category links inside menu */
+  .menu-hindu-items-col p {
+    margin: 10px 0;
+    font-size: 15px;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.3px;
+  }
+
+  .menu-hindu-items-col a {
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  .menu-hindu-items-col a:hover {
+    color: #c40018;
+  }
+
+  /* Bottom section: stack vertically */
+  .menu-hindu-items-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+  }
+
+  .menu-hindu-items-icons {
+    margin-top: 0;
+    display: flex;
+    gap: 16px;
+  }
+
+  .menu-hindu-items-icons span {
+    font-size: 20px;
+  }
+
+  .menu-hindu-items-link {
+    margin-left: 0;
+  }
+
+  /* ── Article content subheadings on mobile ────────────────────── */
+.article-content h4 { font-size: 1.2rem !important; }
+.article-content h3 { font-size: 1.35rem !important; }
+.article-content h2 { font-size: 1.5rem !important; }
+}
+
+/* ── Author Page Responsive ─────────────────────────────────────── */
+@media (max-width: 900px) {
+  .author-featured-article {
+    grid-template-columns: 1fr;
+  }
+  .author-feat-img {
+    height: 220px;
+  }
+  .author-body-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .author-sidebar {
+    border-top: 2px solid #000;
+    padding-top: 24px;
+  }
+}

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+@import "tailwindcss";
+
+.logo-font {
+  font-family: 'Playfair Display', serif;
+}
+
+.lang-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.lang-toggle-btn span {
+  padding: 2px 8px;
+  transition: background 0.15s, color 0.15s;
+}
+.lang-toggle-btn span.active {
+  background: #b91c1c;
+  color: #fff;
+}
+.lang-toggle-btn span:not(.active) {
+  background: #fff;
+  color: #374151;
+}
+
+@keyframes bsSpin { to { transform: rotate(360deg); } }
