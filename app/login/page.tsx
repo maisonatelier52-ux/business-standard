@@ -46,7 +46,7 @@ export default function LoginPage() {
   return (
     <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-12">
       <div className="max-w-md mx-auto bg-white border rounded-xl shadow-sm p-8">
-        
+
         {/* Top Accent Line */}
         <div className="h-1 bg-red-700 w-full rounded-t-xl -mt-8 -mx-8 mb-8" style={{ width: 'calc(100% + 64px)' }}></div>
 
@@ -77,7 +77,7 @@ export default function LoginPage() {
               type="text"
               value={identifier}
               onChange={(e) => setIdentifier(e.target.value)}
-              placeholder="e.g. ramshad or ramshad@example.com"
+              placeholder="e.g. user@example.com"
               className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-200"
               required
             />
