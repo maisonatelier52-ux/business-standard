@@ -755,7 +755,7 @@ export default function ArticleDetailClient() {
             {a.title}
           </h1>
 
-          <p className="text-white/85 text-sm md:text-base leading-relaxed max-w-2xl mb-6">
+          <p className="text-white/85 text-xs md:text-sm leading-relaxed max-w-2xl mb-6">
             {a.deck}
           </p>
 

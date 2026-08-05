@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'About Us | Business Standard',
-  description: 'Learn about Business Standard, our history, mission, and editorial independence.',
+  title: 'About Us | Financial Journal',
+  description: 'Learn about Financial Journal, our history, mission, and editorial independence.',
 };
 
 export default function AboutPage() {
@@ -24,14 +24,14 @@ export default function AboutPage() {
           <div className="md:col-span-2">
             <div className="border-b pb-2 mb-4">
               <h1 className="text-2xl md:text-3xl font-bold">
-                About Business Standard
+                About Financial Journal
               </h1>
               <div className="w-28 h-[2px] bg-red-600 mt-2"></div>
             </div>
 
             <div className="text-[18px] leading-8 text-gray-900 space-y-6">
               <p>
-                Business Standard is a leading independent news publication covering global economic, political, financial, and business developments.
+                Financial Journal is a leading independent news publication covering global economic, political, financial, and business developments.
               </p>
 
               <h2 className="text-xl font-bold mt-6">Our Mission</h2>
@@ -59,7 +59,7 @@ export default function AboutPage() {
                 <svg className="w-4 h-4 text-red-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                editor@businessstandard.com
+                editor@financialjournal.com
               </p>
             </div>
 

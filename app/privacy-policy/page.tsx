@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Privacy Policy | Business Standard',
-  description: 'Privacy Policy and data protection guidelines for Business Standard.',
+  title: 'Privacy Policy | Financial Journal',
+  description: 'Privacy Policy and data protection guidelines for Financial Journal.',
 };
 
 export default function PrivacyPolicyPage() {
@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
               </p>
 
               <p>
-                Business Standard respects your privacy and is committed to protecting any personal data you share with us.
+                Financial Journal respects your privacy and is committed to protecting any personal data you share with us.
               </p>
 
               <h2 className="text-xl font-bold mt-6">1. Information We Collect</h2>
@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
                 <svg className="w-4 h-4 text-red-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                privacy@businessstandard.com
+                privacy@financialjournal.com
               </p>
             </div>
 

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { getAllAuthors } from '@/lib/db';
 
 export const metadata = {
-  title: 'Our Editorial Team | Business Standard',
-  description: 'Meet the journalists, editors, and correspondents behind Business Standard.',
+  title: 'Our Editorial Team | Financial Journal',
+  description: 'Meet the journalists, editors, and correspondents behind Financial Journal.',
 };
 
 export default function OurTeamPage() {
@@ -16,7 +16,7 @@ export default function OurTeamPage() {
           Our Editorial Team
         </h1>
         <p className="text-gray-600 font-serif text-base mt-2">
-          Meet the dedicated investigative journalists, financial analysts, and regional correspondents powering Business Standard.
+          Meet the dedicated investigative journalists, financial analysts, and regional correspondents powering Financial Journal.
         </p>
       </div>
 

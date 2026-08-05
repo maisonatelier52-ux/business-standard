@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Terms and Conditions | Business Standard',
-  description: 'Terms and Conditions of use for Business Standard website.',
+  title: 'Terms and Conditions | Financial Journal',
+  description: 'Terms and Conditions of use for Financial Journal website.',
 };
 
 export default function TermsPage() {
@@ -35,12 +35,12 @@ export default function TermsPage() {
               </p>
 
               <p>
-                Welcome to Business Standard. These Terms and Conditions govern access to and use of the Business Standard website, mobile services, newsletters, social media accounts, and any digital products operated by Business Standard. By accessing or using this website, you agree to comply with these Terms and Conditions. If you do not agree with any part of these terms, you should cease using the website and related services.
+                Welcome to Financial Journal. These Terms and Conditions govern access to and use of the Financial Journal website, mobile services, newsletters, social media accounts, and any digital products operated by Financial Journal. By accessing or using this website, you agree to comply with these Terms and Conditions. If you do not agree with any part of these terms, you should cease using the website and related services.
               </p>
 
               <h2 className="text-xl font-bold mt-6">Use of the Website</h2>
               <p>
-                The content published by Business Standard is intended strictly for informational and editorial purposes. Users agree to use the website in accordance with applicable laws and regulations and shall not:
+                The content published by Financial Journal is intended strictly for informational and editorial purposes. Users agree to use the website in accordance with applicable laws and regulations and shall not:
               </p>
               <ul className="list-disc list-inside space-y-1 ml-2 text-[16px]">
                 <li>Use the website for unlawful purposes.</li>
@@ -52,15 +52,15 @@ export default function TermsPage() {
 
               <h2 className="text-xl font-bold mt-6">Intellectual Property</h2>
               <p>
-                All content published on Business Standard, including articles, photographs, videos, graphics, logos, databases, and trademarks, is protected by applicable intellectual property laws. Reproduction without prior written permission is strictly prohibited.
+                All content published on Financial Journal, including articles, photographs, videos, graphics, logos, databases, and trademarks, is protected by applicable intellectual property laws. Reproduction without prior written permission is strictly prohibited.
               </p>
 
               <h2 className="text-xl font-bold mt-6">Contact Us</h2>
               <p>Inquiries regarding these Terms and Conditions may be directed to:</p>
               <ul className="space-y-1 text-[16px]">
-                <li>General Inquiries: <a href="mailto:info@businessstandard.com" className="text-red-600 hover:underline">info@businessstandard.com</a></li>
-                <li>Editorial Desk: <a href="mailto:editor@businessstandard.com" className="text-red-600 hover:underline">editor@businessstandard.com</a></li>
-                <li>Legal Affairs: <a href="mailto:legal@businessstandard.com" className="text-red-600 hover:underline">legal@businessstandard.com</a></li>
+                <li>General Inquiries: <a href="mailto:info@financialjournal.com" className="text-red-600 hover:underline">info@financialjournal.com</a></li>
+                <li>Editorial Desk: <a href="mailto:editor@financialjournal.com" className="text-red-600 hover:underline">editor@financialjournal.com</a></li>
+                <li>Legal Affairs: <a href="mailto:legal@financialjournal.com" className="text-red-600 hover:underline">legal@financialjournal.com</a></li>
               </ul>
 
             </div>
@@ -81,7 +81,7 @@ export default function TermsPage() {
                 </svg>
                 Email us at
               </p>
-              <p className="text-red-600 text-sm mb-4">assist@bsmail.in</p>
+              <p className="text-red-600 text-sm mb-4">assist@fjmail.in</p>
               <div className="border-t pt-3 mt-3">
                 <h4 className="font-semibold mb-1">Business Hours</h4>
                 <p className="text-sm">
