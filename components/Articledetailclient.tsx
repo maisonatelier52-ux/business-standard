@@ -1,8 +1,8 @@
-
 'use client';
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 /* =====================================================================
    STATIC ARTICLE DATA
@@ -655,10 +655,15 @@ const ARTICLE = {
 
 export default function ArticleDetailClient() {
   const a = ARTICLE;
+  const pathname = usePathname();
 
   const [activeChapter, setActiveChapter] = useState<string | null>(
     a.chapters[0]?.id ?? null
   );
+
+  const [shareUrl, setShareUrl] = useState('');
+  const [shareTitle, setShareTitle] = useState('');
+  const [showToast, setShowToast] = useState(false);
 
   // ---- Scroll-spy: highlight the chapter currently in view -----------
   useEffect(() => {
@@ -703,6 +708,10 @@ export default function ArticleDetailClient() {
       }
     };
 
+    // Set share URL and title
+    setShareUrl(window.location.href);
+    setShareTitle(a.title);
+
     computeActive(); // correct initial state on mount
 
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -712,7 +721,7 @@ export default function ArticleDetailClient() {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
     };
-  }, [a.chapters]);
+  }, [a.chapters, a.title]);
 
   const scrollToChapter = (id: string) => {
     const el = document.getElementById(id);
@@ -721,12 +730,54 @@ export default function ArticleDetailClient() {
     }
   };
 
+  // Share handlers
+  const shareOnFacebook = () => {
+    const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+    window.open(url, '_blank', 'width=600,height=400');
+  };
+
+  const shareOnX = () => {
+    const url = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`;
+    window.open(url, '_blank', 'width=600,height=400');
+  };
+
+  const shareOnLinkedIn = () => {
+    const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
+    window.open(url, '_blank', 'width=600,height=400');
+  };
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+      // Fallback method
+      const textArea = document.createElement('textarea');
+      textArea.value = shareUrl;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000);
+    }
+  };
+
   const logoFont = "font-['Playfair_Display',Georgia,serif]";
   const iconBtn =
-    'inline-flex items-center justify-center w-[30px] h-[30px] rounded-full border border-red-200 text-red-800 transition-all duration-150 hover:bg-red-700 hover:text-white hover:border-red-700';
+    'inline-flex items-center justify-center w-[30px] h-[30px] rounded-full border border-red-200 text-red-800 transition-all duration-150 hover:bg-red-700 hover:text-white hover:border-red-700 cursor-pointer';
 
   return (
     <div className="bg-[#fdfbf7] font-sans antialiased">
+      {/* Toast Notification */}
+      {showToast && (
+        <div className="fixed bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in-up">
+          Link copied to clipboard!
+        </div>
+      )}
+
       {/* ================= HERO ================= */}
       <div className="relative w-full h-[440px] md:h-[560px] overflow-hidden">
         {/* Desktop hero image */}
@@ -777,30 +828,7 @@ export default function ArticleDetailClient() {
       </div>
 
       <div className="max-w-[1180px] mx-auto px-4 md:px-6 py-10 md:py-14">
-        {/* ================= Share row ================= */}
-        {/* <div className="flex flex-wrap items-center justify-end gap-2 max-w-4xl mx-auto mb-6 border-b border-[#eee] pb-5">
-          <span className="text-xs text-gray-500 mr-1 hidden sm:inline">Share</span>
-          <a href="#" aria-label="Share on Facebook" className={iconBtn}>
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z" />
-            </svg>
-          </a>
-          <a href="#" aria-label="Share on X" className={iconBtn}>
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.9 3H21l-4.6 5.2L22 21h-6.4l-5-6.5L4.6 21H2.4l5-5.7L2 3h6.5l4.5 6 5.9-6zm-2.2 16h1.7L7.4 4.9H5.6L16.7 19z" />
-            </svg>
-          </a>
-          <a href="#" aria-label="Share on LinkedIn" className={iconBtn}>
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M4.98 3.5A2.5 2.5 0 100 6a2.5 2.5 0 004.98-.02zM.4 21.4h4.16V8.65H.4V21.4zM8.7 8.65h3.98v1.74h.06c.55-1.05 1.9-2.15 3.9-2.15 4.17 0 4.94 2.75 4.94 6.32v6.84h-4.16v-6.06c0-1.45-.03-3.3-2.02-3.3-2.03 0-2.34 1.58-2.34 3.2v6.16H8.7V8.65z" />
-            </svg>
-          </a>
-          <a href="#" aria-label="Copy link" className={iconBtn}>
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3.9 12a5 5 0 015-5h3v2h-3a3 3 0 000 6h3v2h-3a5 5 0 01-5-5zm7-1h6v2h-6v-2zm3-5h3a5 5 0 010 10h-3v-2h3a3 3 0 000-6h-3V6z" />
-            </svg>
-          </a>
-        </div> */}
+      
 
         {/* ================= Two-column layout ================= */}
         <div className="grid lg:grid-cols-[1fr_300px] gap-8 items-start">
@@ -862,30 +890,54 @@ export default function ArticleDetailClient() {
 
           {/* -------- Sidebar: Table of Contents -------- */}
           <aside className="sticky top-6 self-start space-y-5">
-               <div className="flex flex-wrap items-center justify-center gap-2 max-w-4xl mx-auto mb-6 border-b border-[#eee] pb-5">
-                <span className="text-xs text-gray-500 mr-1 hidden sm:inline">Share</span>
-                <a href="#" aria-label="Share on Facebook" className={iconBtn}>
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z" />
-                  </svg>
-                </a>
-                <a href="#" aria-label="Share on X" className={iconBtn}>
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.9 3H21l-4.6 5.2L22 21h-6.4l-5-6.5L4.6 21H2.4l5-5.7L2 3h6.5l4.5 6 5.9-6zm-2.2 16h1.7L7.4 4.9H5.6L16.7 19z" />
-                  </svg>
-                </a>
-                <a href="#" aria-label="Share on LinkedIn" className={iconBtn}>
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M4.98 3.5A2.5 2.5 0 100 6a2.5 2.5 0 004.98-.02zM.4 21.4h4.16V8.65H.4V21.4zM8.7 8.65h3.98v1.74h.06c.55-1.05 1.9-2.15 3.9-2.15 4.17 0 4.94 2.75 4.94 6.32v6.84h-4.16v-6.06c0-1.45-.03-3.3-2.02-3.3-2.03 0-2.34 1.58-2.34 3.2v6.16H8.7V8.65z" />
-                  </svg>
-                </a>
-                <a href="#" aria-label="Copy link" className={iconBtn}>
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3.9 12a5 5 0 015-5h3v2h-3a3 3 0 000 6h3v2h-3a5 5 0 01-5-5zm7-1h6v2h-6v-2zm3-5h3a5 5 0 010 10h-3v-2h3a3 3 0 000-6h-3V6z" />
-                  </svg>
-                </a>
-              </div>
+              {/* ================= Share row ================= */}
+        <div className="flex flex-wrap items-center justify-center gap-2 max-w-4xl mx-auto mb-6 border-b border-[#eee] pb-5">
+          <span className="text-xs text-gray-500 mr-1 hidden sm:inline">Share</span>
+          
+          <button
+            onClick={shareOnFacebook}
+            aria-label="Share on Facebook"
+            className={iconBtn}
+            type="button"
+          >
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z" />
+            </svg>
+          </button>
 
+          <button
+            onClick={shareOnX}
+            aria-label="Share on X"
+            className={iconBtn}
+            type="button"
+          >
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.9 3H21l-4.6 5.2L22 21h-6.4l-5-6.5L4.6 21H2.4l5-5.7L2 3h6.5l4.5 6 5.9-6zm-2.2 16h1.7L7.4 4.9H5.6L16.7 19z" />
+            </svg>
+          </button>
+
+          <button
+            onClick={shareOnLinkedIn}
+            aria-label="Share on LinkedIn"
+            className={iconBtn}
+            type="button"
+          >
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4.98 3.5A2.5 2.5 0 100 6a2.5 2.5 0 004.98-.02zM.4 21.4h4.16V8.65H.4V21.4zM8.7 8.65h3.98v1.74h.06c.55-1.05 1.9-2.15 3.9-2.15 4.17 0 4.94 2.75 4.94 6.32v6.84h-4.16v-6.06c0-1.45-.03-3.3-2.02-3.3-2.03 0-2.34 1.58-2.34 3.2v6.16H8.7V8.65z" />
+            </svg>
+          </button>
+
+          <button
+            onClick={copyToClipboard}
+            aria-label="Copy link"
+            className={iconBtn}
+            type="button"
+          >
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3.9 12a5 5 0 015-5h3v2h-3a3 3 0 000 6h3v2h-3a5 5 0 01-5-5zm7-1h6v2h-6v-2zm3-5h3a5 5 0 010 10h-3v-2h3a3 3 0 000-6h-3V6z" />
+            </svg>
+          </button>
+        </div>
             <div className="bg-white border border-[#eee] rounded-lg p-5">
               <p className="text-[10px] tracking-[0.14em] font-bold text-gray-400 uppercase mb-4">
                 Table of Contents
@@ -967,10 +1019,26 @@ export default function ArticleDetailClient() {
           </aside>
         </div>
       </div>
+
+      {/* CSS for toast animation */}
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fade-in-up {
+          animation: fadeInUp 0.3s ease-out;
+        }
+      `}</style>
     </div>
   );
 }
-
 
 // 'use client';
 
