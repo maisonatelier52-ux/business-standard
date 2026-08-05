@@ -25,7 +25,7 @@ const DROP_CAP_P =
 const NAME_LINK_CLASS =
   'hover:text-blue-600 hover:underline hover:scale-105 inline-block transition-all duration-200 cursor-pointer';
 
-const nameLink = (href, text) => `
+const nameLink = (href: string, text: string) => `
   <a
     href="${href}"
     target="_blank"
