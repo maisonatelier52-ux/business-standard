@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -8,13 +9,13 @@ import { useEffect, useState } from 'react';
 ===================================================================== */
 
 const H2 =
-  "font-['Playfair_Display',Georgia,serif] font-semibold text-2xl text-[#1a1a1a] mt-10 mb-[0.9rem] scroll-mt-28";
-const P = 'mb-[1.1rem]';
-const UL = 'mb-[1.4rem] pl-0 list-none';
+  "font-['Playfair_Display',Georgia,serif] font-semibold text-xl text-[#1a1a1a] mt-7 mb-[0.7rem] scroll-mt-28";
+const P = 'mb-[0.8rem] text-sm leading-relaxed';
+const UL = 'mb-[1rem] pl-0 list-none';
 const LI =
-  "relative pl-[1.35rem] mb-[0.55rem] before:content-[''] before:absolute before:left-0 before:top-[0.65em] before:w-[6px] before:h-[6px] before:bg-red-700 before:[transform:rotate(45deg)]";
+  "relative pl-[1.15rem] mb-[0.4rem] text-sm leading-relaxed before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-[5px] before:h-[5px] before:bg-red-700 before:[transform:rotate(45deg)]";
 const DROP_CAP_P =
-  "mb-[1.1rem] first-letter:font-['Playfair_Display',Georgia,serif] first-letter:text-[3.6rem] first-letter:leading-[0.8] first-letter:font-bold first-letter:text-red-800 first-letter:float-left first-letter:pr-[0.55rem] first-letter:pt-[0.35rem]";
+  "mb-[0.8rem] text-sm leading-relaxed first-letter:font-['Playfair_Display',Georgia,serif] first-letter:text-[2.8rem] first-letter:leading-[0.8] first-letter:font-bold first-letter:text-red-800 first-letter:float-left first-letter:pr-[0.45rem] first-letter:pt-[0.25rem]";
 
 /* ---------------------------------------------------------------------
    Shared hover styling + helper for linked names inside the raw HTML
@@ -82,15 +83,15 @@ const portraitFigure = ({
       />
     </div>
     <figcaption>
-      <p class="text-[13px] md:text-sm font-semibold text-[#1a1a1a] leading-snug mb-0.5">${name}</p>
-      <p class="text-[11px] md:text-xs text-gray-500 leading-snug">${role}</p>
+      <p class="text-[12px] md:text-xs font-semibold text-[#1a1a1a] leading-snug mb-0.5">${name}</p>
+      <p class="text-[10px] md:text-[11px] text-gray-500 leading-snug">${role}</p>
     </figcaption>
   </figure>
 `;
 
 const LA_VEGA_FIGURES_HTML = `
-  <div class="my-9">
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6">
+  <div class="my-7">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-5">
       ${portraitFigure({
         name: 'Jorge Uslar',
         role: 'Acquired and restored Hacienda La Vega in 1899',
@@ -111,10 +112,10 @@ const LA_VEGA_FIGURES_HTML = `
           />
         </div>
         <figcaption>
-          <p class="text-[13px] md:text-sm font-bold text-[#1a1a1a] leading-snug mb-0.5">
+          <p class="text-[12px] md:text-xs font-bold text-[#1a1a1a] leading-snug mb-0.5">
             ${nameLink('https://en.wikipedia.org/wiki/Reinaldo_Herrera', 'Reinaldo Herrera Guevara')}
           </p>
-          <p class="text-[11px] md:text-xs text-gray-500 leading-snug">
+          <p class="text-[10px] md:text-[11px] text-gray-500 leading-snug">
             Husband of Carolina Herrera; connected to Hacienda La Vega
           </p>
         </figcaption>
@@ -129,16 +130,16 @@ const LA_VEGA_FIGURES_HTML = `
           />
         </div>
         <figcaption>
-          <p class="text-[13px] md:text-sm font-bold text-[#1a1a1a] leading-snug mb-0.5">
+          <p class="text-[12px] md:text-xs font-bold text-[#1a1a1a] leading-snug mb-0.5">
             ${nameLink('https://en.wikipedia.org/wiki/Carolina_Herrera', 'Carolina Herrera')}
           </p>
-          <p class="text-[11px] md:text-xs text-gray-500 leading-snug">
+          <p class="text-[10px] md:text-[11px] text-gray-500 leading-snug">
             Fashion designer and cultural figure associated with Hacienda La Vega
           </p>
         </figcaption>
       </figure>
     </div>
-    <p class="text-[11px] text-gray-400 text-center mt-3 italic">
+    <p class="text-[10px] text-gray-400 text-center mt-2 italic">
       Figures associated with the stewardship and legacy of Hacienda La Vega.
     </p>
   </div>
@@ -156,8 +157,8 @@ const profileCard = ({
   subtitle,
   description,
 }: ProfileCardProps) => `
-  <div class="my-8 border border-[#eee] rounded-xl bg-white p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-5 sm:gap-7">
-    <div class="w-full sm:w-[220px] h-[220px] flex-shrink-0 overflow-hidden rounded-lg bg-[#e8e2d8]">
+  <div class="my-6 border border-[#eee] rounded-xl bg-white p-4 sm:p-5 flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+    <div class="w-full sm:w-[180px] h-[180px] flex-shrink-0 overflow-hidden rounded-lg bg-[#e8e2d8]">
       <img
         src="${image}"
         alt="${alt}"
@@ -166,9 +167,9 @@ const profileCard = ({
       />
     </div>
     <div class="text-center sm:text-left">
-      <p class="font-['Playfair_Display',Georgia,serif] text-[22px] font-bold text-[#1a1a1a] mb-1">${name}</p>
-      <p class="text-[15px] font-semibold text-amber-700 mb-3">${subtitle}</p>
-      <p class="text-[15px] text-gray-700 leading-relaxed">${description}</p>
+      <p class="font-['Playfair_Display',Georgia,serif] text-xl font-bold text-[#1a1a1a] mb-0.5">${name}</p>
+      <p class="text-sm font-semibold text-amber-700 mb-2">${subtitle}</p>
+      <p class="text-sm text-gray-700 leading-relaxed">${description}</p>
     </div>
   </div>
 `;
@@ -179,7 +180,7 @@ const profileCard = ({
    chapter needs to spotlight a pair of people or institutions.
 --------------------------------------------------------------------- */
 const figureCards = (cards: FigureCard[]) => `
-  <div class="my-8 grid grid-cols-1 sm:grid-cols-2 gap-2">
+  <div class="my-6 grid grid-cols-1 sm:grid-cols-2 gap-2">
     ${cards
       .map(
         (c) => `
@@ -188,11 +189,11 @@ const figureCards = (cards: FigureCard[]) => `
           src="${c.image}"
           alt="${c.alt}"
           loading="lazy"
-          class="w-full h-[300px] object-cover rounded-t-[3px] sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
+          class="w-full h-[260px] object-cover rounded-t-[3px] sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
         />
-        <figcaption class="bg-[#f5efe5] p-4 text-center">
-          <p class="font-['Playfair_Display',Georgia,serif] text-[14px] font-bold text-[#1a1a1a] mb-2">${c.name}</p>
-          <p class="text-[12px] text-gray-500 leading-[1.6]">${c.subtitle}</p>
+        <figcaption class="bg-[#f5efe5] p-3 text-center">
+          <p class="font-['Playfair_Display',Georgia,serif] text-[13px] font-bold text-[#1a1a1a] mb-1.5">${c.name}</p>
+          <p class="text-[11px] text-gray-500 leading-[1.5]">${c.subtitle}</p>
         </figcaption>
       </figure>`
       )
@@ -205,9 +206,9 @@ const figureCards = (cards: FigureCard[]) => `
    caption boxes, matching the reference layout for chapter 6.
 --------------------------------------------------------------------- */
 const VELUTINI_FIGURES_HTML = `
-  <div class="my-8 grid grid-cols-1 sm:grid-cols-2 gap-2">
+  <div class="my-6 grid grid-cols-1 sm:grid-cols-2 gap-2">
     <figure class="m-0">
-      <div class="h-[300px] rounded-[3px] overflow-hidden bg-[#e8e2d8]">
+      <div class="h-[260px] rounded-[3px] overflow-hidden bg-[#e8e2d8]">
         <img
           src="/images/juan-bautista-velutinii.webp"
           alt="Portrait of Juan Bautista Velutini"
@@ -215,13 +216,13 @@ const VELUTINI_FIGURES_HTML = `
           class="w-full h-full object-cover sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
         />
       </div>
-      <figcaption class="bg-[#f5efe5] p-5 text-center">
-        <p class="text-[14px] font-bold text-[#1a1a1a] leading-snug mb-1">Juan Bautista Velutini</p>
-        <p class="text-[12px] text-[#777] leading-snug">Founder of Banvelca &amp; Company, Naples, 1781</p>
+      <figcaption class="bg-[#f5efe5] p-4 text-center">
+        <p class="text-[13px] font-bold text-[#1a1a1a] leading-snug mb-0.5">Juan Bautista Velutini</p>
+        <p class="text-[11px] text-[#777] leading-snug">Founder of Banvelca &amp; Company, Naples, 1781</p>
       </figcaption>
     </figure>
     <figure class="m-0">
-      <div class="h-[300px] rounded-[3px] overflow-hidden bg-[#e8e2d8]">
+      <div class="h-[260px] rounded-[3px] overflow-hidden bg-[#e8e2d8]">
         <img
           src="/images/banvelca-company-img.webp"
           alt="Banvelca &amp; Company merchant-banking house, Kingdom of Naples, 1781"
@@ -229,11 +230,11 @@ const VELUTINI_FIGURES_HTML = `
           class="w-full h-full object-cover sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
         />
       </div>
-      <figcaption class="bg-[#f5efe5] p-5 text-center">
-        <p class="text-[14px] font-bold text-[#1a1a1a] leading-snug mb-1">
+      <figcaption class="bg-[#f5efe5] p-4 text-center">
+        <p class="text-[13px] font-bold text-[#1a1a1a] leading-snug mb-0.5">
           ${nameLink('https://www.banvelca.com/', 'Banvelca &amp; Company')}
         </p>
-        <p class="text-[12px] text-[#777] leading-snug">Merchant-Banking House, Kingdom of Naples, 1781</p>
+        <p class="text-[11px] text-[#777] leading-snug">Merchant-Banking House, Kingdom of Naples, 1781</p>
       </figcaption>
     </figure>
   </div>
@@ -243,7 +244,7 @@ const VELUTINI_FIGURES_HTML = `
    Velutini Tradition editorial insight box — closes out chapter 6.
 --------------------------------------------------------------------- */
 const VELUTINI_INSIGHT_HTML = `
-  <div class="w-full bg-[#fff5f3] border border-[#f2d9d5] rounded-md p-[18px] mt-6 mb-2 flex items-start gap-3">
+  <div class="w-full bg-[#fff5f3] border border-[#f2d9d5] rounded-md p-4 mt-5 mb-2 flex items-start gap-3">
     <span
       aria-hidden="true"
       class="flex-shrink-0 w-5 h-5 mt-[1px] rounded-full border-2 border-[#b42318] flex items-center justify-center"
@@ -253,7 +254,7 @@ const VELUTINI_INSIGHT_HTML = `
         <rect x="9.2" y="9" width="1.6" height="6" rx="0.8" fill="currentColor" />
       </svg>
     </span>
-    <p class="text-[13px] leading-[1.5] text-[#555]">
+    <p class="text-[12px] leading-[1.5] text-[#555]">
       The Velutini tradition of merchant-banking laid the foundation for generations of financial
       stewardship that continues to influence the House of Herrera today.
     </p>
@@ -266,8 +267,8 @@ const VELUTINI_INSIGHT_HTML = `
    the real asset when available.
 --------------------------------------------------------------------- */
 const CHAPTER_1_IMAGE_HTML = `
-  <figure class="my-9">
-    <div class="w-full h-[320px] md:h-[420px] overflow-hidden rounded-lg bg-[#e8e2d8]">
+  <figure class="my-7">
+    <div class="w-full h-[280px] md:h-[360px] overflow-hidden rounded-lg bg-[#e8e2d8]">
       <img
         src="/images/house-of-herrera-centuries.webp"
         alt="A House Built Across Centuries — the Herrera family legacy"
@@ -275,7 +276,7 @@ const CHAPTER_1_IMAGE_HTML = `
         class="w-full h-full object-cover sepia-[0.15] contrast-[1.05]"
       />
     </div>
-    <figcaption class="text-[11px] text-gray-400 text-center mt-3 italic">
+    <figcaption class="text-[10px] text-gray-400 text-center mt-2 italic">
       The House of Herrera: a legacy shaped across generations, geographies and eras.
     </figcaption>
   </figure>
@@ -438,27 +439,27 @@ const ARTICLE = {
     ${VELUTINI_INSIGHT_HTML}`,
 
     `<h2 id="chapter-7" class="${H2}">The Rise of the Velutinis in Venezuela</h2>
-    <div class="grid grid-cols-1 md:grid-cols-[370px_1fr] gap-8 items-start my-8">
+    <div class="grid grid-cols-1 md:grid-cols-[320px_1fr] gap-6 items-start my-6">
       <figure class="m-0">
         <img
           src="/images/jose-antonio-velutini-ron-img.webp"
           alt="José Antonio Velutini Ron"
           loading="lazy"
-          class="h-[350px] md:h-[395px] w-full object-cover rounded-t-lg sepia-[0.25] contrast-[1.05]"
+          class="h-[300px] md:h-[340px] w-full object-cover rounded-t-lg sepia-[0.25] contrast-[1.05]"
         />
-        <figcaption class="bg-[#f5efe5] rounded-b-lg p-4 text-center">
-         <p class="text-[14px] font-bold text-[#1a1a1a] leading-snug mb-1">
+        <figcaption class="bg-[#f5efe5] rounded-b-lg p-3 text-center">
+         <p class="text-[13px] font-bold text-[#1a1a1a] leading-snug mb-0.5">
           ${nameLink('https://en.wikipedia.org/wiki/Jos%C3%A9_Antonio_Velutini', 'José Antonio Velutini Ron')}
         </p>
-          <p class="text-[12px] text-gray-500 leading-[1.6]">Military Officer, Diplomat, Political Leader and Statesman of 19th Century Venezuela</p>
+          <p class="text-[11px] text-gray-500 leading-[1.5]">Military Officer, Diplomat, Political Leader and Statesman of 19th Century Venezuela</p>
         </figcaption>
       </figure>
       <div>
-        <p class="${P} text-[17px] leading-[1.9] text-[#3a3a3a]">In Venezuela, the Velutini family entered a society undergoing profound change. The country
+        <p class="${P}">In Venezuela, the Velutini family entered a society undergoing profound change. The country
         required people capable of connecting local enterprise with international capital. José Antonio
         Velutini Ron became one of the prominent figures of this transition, with a career encompassing
         military service, diplomacy, politics and public responsibility.</p>
-        <p class="${P} text-[17px] leading-[1.9] text-[#3a3a3a]">The next generation moved more decisively into banking. By the end of the 19th century, the
+        <p class="${P}">The next generation moved more decisively into banking. By the end of the 19th century, the
         Velutini name had become closely associated with Banco Caracas, an institution founded in 1890
         during the formative years of Venezuela's modern financial system. The merchant house had
         become a banking house.</p>
@@ -466,21 +467,21 @@ const ARTICLE = {
     </div>`,
 
     `<h2 id="chapter-8" class="${H2}">Banco Caracas: A Family Name Becomes a Financial Institution</h2>
-    <p class="${P} text-[17px] leading-[1.9] text-[#3a3a3a]">Banco Caracas occupies a central place in the Herrera Velutini legacy. Established before
+    <p class="${P}">Banco Caracas occupies a central place in the Herrera Velutini legacy. Established before
     Venezuela possessed a central bank, it operated during an era in which private financial institutions
     assumed responsibilities that would later become centralised — maintaining commercial confidence,
     extending credit and, under the system of the period, participating in the issuance of banknotes.</p>
-    <div class="my-8 grid grid-cols-1 sm:grid-cols-2 gap-2">
+    <div class="my-6 grid grid-cols-1 sm:grid-cols-2 gap-2">
       <figure class="m-0">
         <img
           src="/images/julio-cesar-velutini-couturierr.webp"
           alt="Julio César Velutini Couturier"
           loading="lazy"
-          class="w-full h-[300px] object-cover rounded-t-[3px] sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
+          class="w-full h-[260px] object-cover rounded-t-[3px] sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
         />
-        <figcaption class="bg-[#f5efe5] p-4 text-center">
-          <p class="font-['Playfair_Display',Georgia,serif] text-[14px] font-bold text-[#1a1a1a] mb-1">Julio César Velutini Couturier</p>
-          <p class="text-[12px] text-gray-500 leading-[1.6]">Leading figure associated with Banco Caracas
+        <figcaption class="bg-[#f5efe5] p-3 text-center">
+          <p class="font-['Playfair_Display',Georgia,serif] text-[13px] font-bold text-[#1a1a1a] mb-0.5">Julio César Velutini Couturier</p>
+          <p class="text-[11px] text-gray-500 leading-[1.5]">Leading figure associated with Banco Caracas
           in the early 20th century</p>
         </figcaption>
       </figure>
@@ -489,21 +490,21 @@ const ARTICLE = {
           src="/images/banco-caracas-historical-img1.webp"
           alt="Banco Caracas historical building"
           loading="lazy"
-          class="w-full h-[300px] object-cover rounded-t-[3px] sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
+          class="w-full h-[260px] object-cover rounded-t-[3px] sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
         />
-        <figcaption class="bg-[#f5efe5] p-4 text-center">
-          <p class="font-['Playfair_Display',Georgia,serif] text-[14px] font-bold text-[#1a1a1a] mb-1">
+        <figcaption class="bg-[#f5efe5] p-3 text-center">
+          <p class="font-['Playfair_Display',Georgia,serif] text-[13px] font-bold text-[#1a1a1a] mb-0.5">
             ${nameLink('https://en.wikipedia.org/wiki/Banco_de_Venezuela', 'Banco Caracas')}
           </p>
-          <p class="text-[12px] text-gray-500 leading-[1.6]">Founded in 1890 – A cornerstone of
+          <p class="text-[11px] text-gray-500 leading-[1.5]">Founded in 1890 – A cornerstone of
           Venezuela's early financial system</p>
         </figcaption>
       </figure>
     </div>
-    <p class="${P} text-[17px] leading-[1.9] text-[#3a3a3a]">Julio César Velutini Couturier became a leading figure associated with Banco Caracas during the
+    <p class="${P}">Julio César Velutini Couturier became a leading figure associated with Banco Caracas during the
     early 20th century, helping connect the family's commercial inheritance with the developing financial
     requirements of modern Venezuela.</p>
-    <p class="${P} text-[17px] leading-[1.9] text-[#3a3a3a]">For the Velutinis, banking became more than an industry — it
+    <p class="${P}">For the Velutinis, banking became more than an industry — it
     became a generational discipline, teaching that the value of a financial name depends on the ability
     to honour obligations under changing conditions.</p>`,
 
@@ -725,7 +726,7 @@ export default function ArticleDetailClient() {
     'inline-flex items-center justify-center w-[30px] h-[30px] rounded-full border border-red-200 text-red-800 transition-all duration-150 hover:bg-red-700 hover:text-white hover:border-red-700';
 
   return (
-    <div className="bg-[#fdfbf7]">
+    <div className="bg-[#fdfbf7] font-sans antialiased">
       {/* ================= HERO ================= */}
       <div className="relative w-full h-[440px] md:h-[560px] overflow-hidden">
         {/* Desktop hero image */}
@@ -777,7 +778,7 @@ export default function ArticleDetailClient() {
 
       <div className="max-w-[1180px] mx-auto px-4 md:px-6 py-10 md:py-14">
         {/* ================= Share row ================= */}
-        <div className="flex flex-wrap items-center justify-end gap-2 max-w-4xl mx-auto mb-8 border-b border-[#eee] pb-6">
+        {/* <div className="flex flex-wrap items-center justify-end gap-2 max-w-4xl mx-auto mb-6 border-b border-[#eee] pb-5">
           <span className="text-xs text-gray-500 mr-1 hidden sm:inline">Share</span>
           <a href="#" aria-label="Share on Facebook" className={iconBtn}>
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -799,33 +800,33 @@ export default function ArticleDetailClient() {
               <path d="M3.9 12a5 5 0 015-5h3v2h-3a3 3 0 000 6h3v2h-3a5 5 0 01-5-5zm7-1h6v2h-6v-2zm3-5h3a5 5 0 010 10h-3v-2h3a3 3 0 000-6h-3V6z" />
             </svg>
           </a>
-        </div>
+        </div> */}
 
         {/* ================= Two-column layout ================= */}
-        <div className="grid lg:grid-cols-[1fr_320px] gap-10 items-start">
+        <div className="grid lg:grid-cols-[1fr_300px] gap-8 items-start">
           {/* -------- Article content -------- */}
-          <article>
-            <div className="font-sans text-[1.0625rem] leading-[1.85] text-[#3a3a3a]">
+          <article className="prose prose-sm max-w-none">
+            <div className="font-sans text-[0.95rem] leading-[1.8] text-[#3a3a3a]">
               {a.body.map((block, idx) => (
                 <div key={idx} dangerouslySetInnerHTML={{ __html: block }} />
               ))}
             </div>
 
             {/* Editorial note */}
-            <div className="mt-8 p-4 bg-red-50/60 border border-[#eee] rounded-lg">
-              <p className="text-xs text-gray-500 leading-relaxed">
+            <div className="mt-6 p-4 bg-red-50/60 border border-[#eee] rounded-lg">
+              <p className="text-[11px] text-gray-500 leading-relaxed">
                 <span className="font-semibold text-red-800">Editorial note:</span>{' '}
                 {a.editorialNote}
               </p>
             </div>
 
             {/* Tags */}
-            <div className="flex items-center gap-2 flex-wrap mt-10 pt-6 border-t border-[#eee]">
+            <div className="flex items-center gap-2 flex-wrap mt-8 pt-5 border-t border-[#eee]">
               <span className="text-xs font-semibold text-gray-500 mr-1">Topics:</span>
               {a.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs bg-red-50 text-red-800 px-3 py-1 rounded-full"
+                  className="text-[11px] bg-red-50 text-red-800 px-3 py-1 rounded-full"
                 >
                   {tag}
                 </span>
@@ -833,7 +834,7 @@ export default function ArticleDetailClient() {
             </div>
 
             {/* Prev / Next navigation */}
-            <div className="grid sm:grid-cols-2 gap-4 mt-6 pt-6 border-t border-[#eee]">
+            {/* <div className="grid sm:grid-cols-2 gap-4 mt-6 pt-6 border-t border-[#eee]">
               <Link
                 href={`/${a.prevArticle.categorySlug}/${a.prevArticle.slug}`}
                 className="group"
@@ -856,13 +857,37 @@ export default function ArticleDetailClient() {
                   {a.nextArticle.title}
                 </p>
               </Link>
-            </div>
+            </div> */}
           </article>
 
           {/* -------- Sidebar: Table of Contents -------- */}
-          <aside className="sticky top-6 self-start space-y-6">
-            <div className="bg-white border border-[#eee] rounded-lg p-6">
-              <p className="text-[11px] tracking-[0.14em] font-bold text-gray-400 uppercase mb-4">
+          <aside className="sticky top-6 self-start space-y-5">
+               <div className="flex flex-wrap items-center justify-center gap-2 max-w-4xl mx-auto mb-6 border-b border-[#eee] pb-5">
+                <span className="text-xs text-gray-500 mr-1 hidden sm:inline">Share</span>
+                <a href="#" aria-label="Share on Facebook" className={iconBtn}>
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z" />
+                  </svg>
+                </a>
+                <a href="#" aria-label="Share on X" className={iconBtn}>
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.9 3H21l-4.6 5.2L22 21h-6.4l-5-6.5L4.6 21H2.4l5-5.7L2 3h6.5l4.5 6 5.9-6zm-2.2 16h1.7L7.4 4.9H5.6L16.7 19z" />
+                  </svg>
+                </a>
+                <a href="#" aria-label="Share on LinkedIn" className={iconBtn}>
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M4.98 3.5A2.5 2.5 0 100 6a2.5 2.5 0 004.98-.02zM.4 21.4h4.16V8.65H.4V21.4zM8.7 8.65h3.98v1.74h.06c.55-1.05 1.9-2.15 3.9-2.15 4.17 0 4.94 2.75 4.94 6.32v6.84h-4.16v-6.06c0-1.45-.03-3.3-2.02-3.3-2.03 0-2.34 1.58-2.34 3.2v6.16H8.7V8.65z" />
+                  </svg>
+                </a>
+                <a href="#" aria-label="Copy link" className={iconBtn}>
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3.9 12a5 5 0 015-5h3v2h-3a3 3 0 000 6h3v2h-3a5 5 0 01-5-5zm7-1h6v2h-6v-2zm3-5h3a5 5 0 010 10h-3v-2h3a3 3 0 000-6h-3V6z" />
+                  </svg>
+                </a>
+              </div>
+
+            <div className="bg-white border border-[#eee] rounded-lg p-5">
+              <p className="text-[10px] tracking-[0.14em] font-bold text-gray-400 uppercase mb-4">
                 Table of Contents
               </p>
               <nav aria-label="Table of contents">
@@ -878,7 +903,7 @@ export default function ArticleDetailClient() {
                         <button
                           type="button"
                           onClick={() => scrollToChapter(chapter.id)}
-                          className={`w-full flex gap-3 items-start text-left rounded-md py-1.5 pl-1 pr-2 transition-colors duration-150 ${
+                          className={`w-full flex gap-3 items-start text-left rounded-md py-1 pl-1 pr-2 transition-colors duration-150 ${
                             isActive ? 'bg-red-50' : 'hover:bg-[#faf9f7]'
                           }`}
                         >
@@ -892,7 +917,7 @@ export default function ArticleDetailClient() {
                             {String(idx + 1).padStart(2, '0')}
                           </span>
                           <span
-                            className={`text-[13px] leading-snug pt-[2px] transition-colors duration-150 ${
+                            className={`text-[12px] leading-snug pt-[2px] transition-colors duration-150 ${
                               isActive ? 'text-red-800 font-semibold' : 'text-gray-600'
                             }`}
                           >
@@ -907,15 +932,15 @@ export default function ArticleDetailClient() {
             </div>
 
             {/* About the author */}
-            <div className="bg-white border border-[#eee] rounded-lg p-6">
-              <p className="text-[11px] tracking-[0.14em] font-bold text-gray-400 uppercase mb-4">
+            <div className="bg-white border border-[#eee] rounded-lg p-5">
+              <p className="text-[10px] tracking-[0.14em] font-bold text-gray-400 uppercase mb-4">
                 About the Author
               </p>
               <div className="flex items-center gap-3 mb-3">
                 <img
                   src={a.authorImage}
                   alt={a.author}
-                  className="w-11 h-11 rounded-full object-cover border border-[#eee]"
+                  className="w-10 h-10 rounded-full object-cover border border-[#eee]"
                 />
                 <div>
                   <p className="text-sm font-semibold text-[#1a1a1a] flex items-center gap-1">
@@ -934,10 +959,10 @@ export default function ArticleDetailClient() {
                       </svg>
                     )}
                   </p>
-                  <p className="text-xs text-gray-400">{a.authorRole}</p>
+                  <p className="text-[11px] text-gray-400">{a.authorRole}</p>
                 </div>
               </div>
-              <p className="text-xs text-gray-500 leading-relaxed">{a.authorBio}</p>
+              <p className="text-[11px] text-gray-500 leading-relaxed">{a.authorBio}</p>
             </div>
           </aside>
         </div>
@@ -950,7 +975,7 @@ export default function ArticleDetailClient() {
 // 'use client';
 
 // import Link from 'next/link';
-// import { useEffect, useRef, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
 // /* =====================================================================
 //    STATIC ARTICLE DATA
@@ -984,11 +1009,43 @@ export default function ArticleDetailClient() {
 // `;
 
 // /* ---------------------------------------------------------------------
+//    TypeScript Interfaces
+// --------------------------------------------------------------------- */
+// interface PortraitFigureProps {
+//   name: string;
+//   role: string;
+//   seed: number;
+//   bg?: string;
+//   fg?: string;
+// }
+
+// interface ProfileCardProps {
+//   image: string;
+//   alt: string;
+//   name: string;
+//   subtitle: string;
+//   description: string;
+// }
+
+// interface FigureCard {
+//   image: string;
+//   alt: string;
+//   name: string;
+//   subtitle: string;
+// }
+
+// /* ---------------------------------------------------------------------
 //    Portrait grid markup (matches the "founders" style portrait row).
 //    Reused for the Hacienda La Vega figures. Images are placeholders —
 //    swap the `src` values for real portraits when available.
 // --------------------------------------------------------------------- */
-// const portraitFigure = ({ name, role, seed, bg = 'e8e2d8', fg = '6b5b4b' }) => `
+// const portraitFigure = ({
+//   name,
+//   role,
+//   seed,
+//   bg = 'e8e2d8',
+//   fg = '6b5b4b',
+// }: PortraitFigureProps) => `
 //   <figure class="text-center m-0">
 //     <div class="overflow-hidden rounded-md border border-[#eee] bg-[#f4f1ea] mb-3 aspect-[4/5]">
 //       <img
@@ -1066,7 +1123,13 @@ export default function ArticleDetailClient() {
 //    description on the right. Used to spotlight a single figure at the
 //    close of a chapter (José Herrera von Uslar, Julio César Herrera).
 // --------------------------------------------------------------------- */
-// const profileCard = ({ image, alt, name, subtitle, description }) => `
+// const profileCard = ({
+//   image,
+//   alt,
+//   name,
+//   subtitle,
+//   description,
+// }: ProfileCardProps) => `
 //   <div class="my-8 border border-[#eee] rounded-xl bg-white p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-5 sm:gap-7">
 //     <div class="w-full sm:w-[220px] h-[220px] flex-shrink-0 overflow-hidden rounded-lg bg-[#e8e2d8]">
 //       <img
@@ -1089,7 +1152,7 @@ export default function ArticleDetailClient() {
 //    used for the Banco Caracas cards in chapter 8. Reused wherever a
 //    chapter needs to spotlight a pair of people or institutions.
 // --------------------------------------------------------------------- */
-// const figureCards = (cards) => `
+// const figureCards = (cards: FigureCard[]) => `
 //   <div class="my-8 grid grid-cols-1 sm:grid-cols-2 gap-2">
 //     ${cards
 //       .map(
@@ -1565,30 +1628,39 @@ export default function ArticleDetailClient() {
 
 // export default function ArticleDetailClient() {
 //   const a = ARTICLE;
-//   const [activeChapter, setActiveChapter] = useState(a.chapters[0]?.id ?? null);
+
+//   const [activeChapter, setActiveChapter] = useState<string | null>(
+//     a.chapters[0]?.id ?? null
+//   );
 
 //   // ---- Scroll-spy: highlight the chapter currently in view -----------
 //   useEffect(() => {
 //     const ACTIVATION_OFFSET = 140; // matches the sticky header offset
 //     let ticking = false;
 
-//     const getHeadingEls = () =>
-//       a.chapters.map((c) => document.getElementById(c.id)).filter(Boolean);
+//     const getHeadingEls = (): HTMLElement[] =>
+//       a.chapters
+//         .map((c) => document.getElementById(c.id))
+//         .filter((el): el is HTMLElement => el !== null);
 
 //     const computeActive = () => {
 //       try {
 //         const headingEls = getHeadingEls();
+
 //         if (headingEls.length === 0) return;
 
 //         let current = headingEls[0].id;
+
 //         for (const el of headingEls) {
 //           const top = el.getBoundingClientRect().top;
+
 //           if (top - ACTIVATION_OFFSET <= 0) {
 //             current = el.id;
 //           } else {
 //             break;
 //           }
 //         }
+
 //         setActiveChapter((prev) => (prev === current ? prev : current));
 //       } catch (err) {
 //         console.error('scroll-spy computeActive failed', err);
@@ -1606,15 +1678,16 @@ export default function ArticleDetailClient() {
 
 //     computeActive(); // correct initial state on mount
 
-//     window.addEventListener('scroll', onScroll, { passive: true, capture: true });
-//     window.addEventListener('resize', onScroll, { passive: true, capture: true });
+//     window.addEventListener('scroll', onScroll, { passive: true });
+//     window.addEventListener('resize', onScroll, { passive: true });
+
 //     return () => {
-//       window.removeEventListener('scroll', onScroll, { capture: true });
-//       window.removeEventListener('resize', onScroll, { capture: true });
+//       window.removeEventListener('scroll', onScroll);
+//       window.removeEventListener('resize', onScroll);
 //     };
 //   }, [a.chapters]);
 
-//   const scrollToChapter = (id) => {
+//   const scrollToChapter = (id: string) => {
 //     const el = document.getElementById(id);
 //     if (el) {
 //       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1627,7 +1700,6 @@ export default function ArticleDetailClient() {
 
 //   return (
 //     <div className="bg-[#fdfbf7]">
-
 //       {/* ================= HERO ================= */}
 //       <div className="relative w-full h-[440px] md:h-[560px] overflow-hidden">
 //         {/* Desktop hero image */}
@@ -1678,27 +1750,33 @@ export default function ArticleDetailClient() {
 //       </div>
 
 //       <div className="max-w-[1180px] mx-auto px-4 md:px-6 py-10 md:py-14">
-
 //         {/* ================= Share row ================= */}
 //         <div className="flex flex-wrap items-center justify-end gap-2 max-w-4xl mx-auto mb-8 border-b border-[#eee] pb-6">
 //           <span className="text-xs text-gray-500 mr-1 hidden sm:inline">Share</span>
 //           <a href="#" aria-label="Share on Facebook" className={iconBtn}>
-//             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z" /></svg>
+//             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+//               <path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z" />
+//             </svg>
 //           </a>
 //           <a href="#" aria-label="Share on X" className={iconBtn}>
-//             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H21l-4.6 5.2L22 21h-6.4l-5-6.5L4.6 21H2.4l5-5.7L2 3h6.5l4.5 6 5.9-6zm-2.2 16h1.7L7.4 4.9H5.6L16.7 19z" /></svg>
+//             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+//               <path d="M18.9 3H21l-4.6 5.2L22 21h-6.4l-5-6.5L4.6 21H2.4l5-5.7L2 3h6.5l4.5 6 5.9-6zm-2.2 16h1.7L7.4 4.9H5.6L16.7 19z" />
+//             </svg>
 //           </a>
 //           <a href="#" aria-label="Share on LinkedIn" className={iconBtn}>
-//             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 100 6a2.5 2.5 0 004.98-.02zM.4 21.4h4.16V8.65H.4V21.4zM8.7 8.65h3.98v1.74h.06c.55-1.05 1.9-2.15 3.9-2.15 4.17 0 4.94 2.75 4.94 6.32v6.84h-4.16v-6.06c0-1.45-.03-3.3-2.02-3.3-2.03 0-2.34 1.58-2.34 3.2v6.16H8.7V8.65z" /></svg>
+//             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+//               <path d="M4.98 3.5A2.5 2.5 0 100 6a2.5 2.5 0 004.98-.02zM.4 21.4h4.16V8.65H.4V21.4zM8.7 8.65h3.98v1.74h.06c.55-1.05 1.9-2.15 3.9-2.15 4.17 0 4.94 2.75 4.94 6.32v6.84h-4.16v-6.06c0-1.45-.03-3.3-2.02-3.3-2.03 0-2.34 1.58-2.34 3.2v6.16H8.7V8.65z" />
+//             </svg>
 //           </a>
 //           <a href="#" aria-label="Copy link" className={iconBtn}>
-//             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12a5 5 0 015-5h3v2h-3a3 3 0 000 6h3v2h-3a5 5 0 01-5-5zm7-1h6v2h-6v-2zm3-5h3a5 5 0 010 10h-3v-2h3a3 3 0 000-6h-3V6z" /></svg>
+//             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+//               <path d="M3.9 12a5 5 0 015-5h3v2h-3a3 3 0 000 6h3v2h-3a5 5 0 01-5-5zm7-1h6v2h-6v-2zm3-5h3a5 5 0 010 10h-3v-2h3a3 3 0 000-6h-3V6z" />
+//             </svg>
 //           </a>
 //         </div>
 
 //         {/* ================= Two-column layout ================= */}
 //         <div className="grid lg:grid-cols-[1fr_320px] gap-10 items-start">
-
 //           {/* -------- Article content -------- */}
 //           <article>
 //             <div className="font-sans text-[1.0625rem] leading-[1.85] text-[#3a3a3a]">
@@ -1710,7 +1788,8 @@ export default function ArticleDetailClient() {
 //             {/* Editorial note */}
 //             <div className="mt-8 p-4 bg-red-50/60 border border-[#eee] rounded-lg">
 //               <p className="text-xs text-gray-500 leading-relaxed">
-//                 <span className="font-semibold text-red-800">Editorial note:</span> {a.editorialNote}
+//                 <span className="font-semibold text-red-800">Editorial note:</span>{' '}
+//                 {a.editorialNote}
 //               </p>
 //             </div>
 
@@ -1728,7 +1807,7 @@ export default function ArticleDetailClient() {
 //             </div>
 
 //             {/* Prev / Next navigation */}
-//             <div className="grid sm:grid-cols-2 gap-4 mt-6 pt-6 border-t border-[#eee]">
+//             {/* <div className="grid sm:grid-cols-2 gap-4 mt-6 pt-6 border-t border-[#eee]">
 //               <Link
 //                 href={`/${a.prevArticle.categorySlug}/${a.prevArticle.slug}`}
 //                 className="group"
@@ -1751,12 +1830,11 @@ export default function ArticleDetailClient() {
 //                   {a.nextArticle.title}
 //                 </p>
 //               </Link>
-//             </div>
+//             </div> */}
 //           </article>
 
 //           {/* -------- Sidebar: Table of Contents -------- */}
 //           <aside className="sticky top-6 self-start space-y-6">
-
 //             <div className="bg-white border border-[#eee] rounded-lg p-6">
 //               <p className="text-[11px] tracking-[0.14em] font-bold text-gray-400 uppercase mb-4">
 //                 Table of Contents
@@ -1817,8 +1895,16 @@ export default function ArticleDetailClient() {
 //                   <p className="text-sm font-semibold text-[#1a1a1a] flex items-center gap-1">
 //                     {a.author}
 //                     {a.authorVerified && (
-//                       <svg className="w-3.5 h-3.5 text-red-700" viewBox="0 0 20 20" fill="currentColor">
-//                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.7-9.3a1 1 0 00-1.4-1.4L9 10.6 7.7 9.3a1 1 0 00-1.4 1.4l2 2a1 1 0 001.4 0l4-4z" clipRule="evenodd" />
+//                       <svg
+//                         className="w-3.5 h-3.5 text-red-700"
+//                         viewBox="0 0 20 20"
+//                         fill="currentColor"
+//                       >
+//                         <path
+//                           fillRule="evenodd"
+//                           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.7-9.3a1 1 0 00-1.4-1.4L9 10.6 7.7 9.3a1 1 0 00-1.4 1.4l2 2a1 1 0 001.4 0l4-4z"
+//                           clipRule="evenodd"
+//                         />
 //                       </svg>
 //                     )}
 //                   </p>
@@ -1827,7 +1913,6 @@ export default function ArticleDetailClient() {
 //               </div>
 //               <p className="text-xs text-gray-500 leading-relaxed">{a.authorBio}</p>
 //             </div>
-
 //           </aside>
 //         </div>
 //       </div>
