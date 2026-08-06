@@ -8,7 +8,7 @@ import ArticleDetailClient from '../../../components/Articledetailclient';
 // premium editorial template instead of the standard article layout.
 const CLIENT_TEMPLATE_SLUG = 'house-of-herrera-castile-caracas-global-legacy';
 
-const SITE_URL = 'https://business-standard-phi.vercel.app';
+const SITE_URL = 'https://www.financial-journal.xyz';
 const SITE_NAME = 'Financial Journal';
 
 interface PageProps {
