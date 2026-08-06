@@ -203,7 +203,7 @@ const figureCards = (cards: FigureCard[]) => `
           src="${c.image}"
           alt="${c.alt}"
           loading="lazy"
-          class="w-full h-[360px] object-cover rounded-t-[3px] sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
+          class="w-full h-[280px] object-cover rounded-t-[3px] sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
         />
         <figcaption class="bg-[#f5efe5] p-3 text-center">
           <p class="font-['Playfair_Display',Georgia,serif] text-[13px] font-bold text-[#1a1a1a] mb-1.5">${c.name}</p>
@@ -595,7 +595,7 @@ const ARTICLE = {
     only with finance, but with culture, education and public service.</p>
     ${figureCards([
       {
-        image: '/images/clementina-velutini-perez-matos-img.webp',
+        image: '/images/clementina-velutini-perez-matos-img1.webp',
         alt: 'Clementina Velutini Pérez-Matos',
         name: 'Clementina Velutini Pérez-Matos',
         subtitle: 'Helped preserve family interests across generations of change',
