@@ -5,6 +5,7 @@ export default function Footer() {
   const categories = getAllCategories();
 
   return (
+    <div className="max-w-[1200px] mx-auto px-4 md:px-6">
     <footer className="bg-[#f3f3f3] mt-10 border-t">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-10">
         
@@ -75,6 +76,7 @@ export default function Footer() {
 
       </div>
     </footer>
+    </div>
   );
 }
 // import Link from 'next/link';

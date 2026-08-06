@@ -97,11 +97,25 @@ const LA_VEGA_FIGURES_HTML = `
         role: 'Acquired and restored Hacienda La Vega in 1899',
         seed: 1,
       })}
-      ${portraitFigure({
-        name: 'Reinaldo Herrera Uslar',
-        role: 'Helped establish La Vega as a cultural landmark',
-        seed: 2,
-      })}
+      <figure class="text-center m-0">
+        <div class="overflow-hidden rounded-md border border-[#eee] bg-[#f4f1ea] mb-3 aspect-[4/5]">
+          <img
+            src="/images/reinaldo-herrera-uslar.webp"
+            alt="Reinaldo Herrera Uslar"
+            class="w-full h-full object-cover contrast-[1.05] saturate-[1.1]"
+            loading="lazy"
+          />
+        </div>
+        <figcaption>
+          <p class="text-[12px] md:text-xs font-bold text-[#1a1a1a] leading-snug mb-0.5">
+            Reinaldo Herrera Uslar
+          </p>
+          <p class="text-[10px] md:text-[11px] text-gray-500 leading-snug">
+            Helped establish La Vega as a cultural landmark
+          </p>
+        </figcaption>
+      </figure>
+
        <figure class="text-center m-0">
         <div class="overflow-hidden rounded-md border border-[#eee] bg-[#f4f1ea] mb-3 aspect-[4/5]">
           <img
@@ -189,7 +203,7 @@ const figureCards = (cards: FigureCard[]) => `
           src="${c.image}"
           alt="${c.alt}"
           loading="lazy"
-          class="w-full h-[260px] object-cover rounded-t-[3px] sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
+          class="w-full h-[360px] object-cover rounded-t-[3px] sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
         />
         <figcaption class="bg-[#f5efe5] p-3 text-center">
           <p class="font-['Playfair_Display',Georgia,serif] text-[13px] font-bold text-[#1a1a1a] mb-1.5">${c.name}</p>
@@ -581,7 +595,7 @@ const ARTICLE = {
     only with finance, but with culture, education and public service.</p>
     ${figureCards([
       {
-        image: '/images/clementina-velutini-perez-matos.webp',
+        image: '/images/clementina-velutini-perez-matos-img.webp',
         alt: 'Clementina Velutini Pérez-Matos',
         name: 'Clementina Velutini Pérez-Matos',
         subtitle: 'Helped preserve family interests across generations of change',
