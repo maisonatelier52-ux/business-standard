@@ -64,7 +64,7 @@ export default function Footer() {
             <a href="#" aria-label="Twitter">
               <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" className="w-6 h-6" alt="Twitter" />
             </a>
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/financial_journal_24/?utm_source=ig_web_button_share_sheet" aria-label="Instagram">
               <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" className="w-6 h-6" alt="Instagram" />
             </a>
             <a href="#" aria-label="LinkedIn">
