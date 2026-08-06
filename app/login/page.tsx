@@ -53,7 +53,7 @@ export default function LoginPage() {
         <div className="text-center mb-8">
           <Link href="/">
             <h1 className="text-3xl font-bold logo-font text-red-700 mb-2">
-              Business Standard
+              Financial Journal
             </h1>
           </Link>
           <h2 className="text-xl font-bold text-gray-900">Sign in to your account</h2>

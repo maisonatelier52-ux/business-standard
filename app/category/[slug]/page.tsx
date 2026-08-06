@@ -8,14 +8,34 @@ interface PageProps {
   }>;
 }
 
+const SITE_URL = 'https://www.financial-journal.xyz';
+const SITE_NAME = 'Financial Journal';
+
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const category = getCategoryBySlug(slug);
   if (!category) return {};
 
+  const title = `${category.name} News`;
+  const description = `Latest news, analysis and reports in ${category.name}.`;
+  const url = `${SITE_URL}/category/${category.slug}`;
+
   return {
-    title: `${category.name} News | Business Standard`,
-    description: `Latest news, analysis and reports in ${category.name}.`,
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${title} | ${SITE_NAME}`,
+      description,
+      url,
+      siteName: SITE_NAME,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | ${SITE_NAME}`,
+      description,
+    },
   };
 }
 
@@ -43,11 +63,11 @@ export default async function CategoryPage({ params }: PageProps) {
           / {category.name}
         </div>
 
-        {/* Category Header */}
+        {/* Category Header — page's single H1 (fixes previous H2 start / missing H1) */}
         <div className="flex items-center justify-between border-b pb-2 mb-4">
-          <h2 className="text-2xl font-bold">
+          <h1 className="text-2xl font-bold">
             {category.name} News
-          </h2>
+          </h1>
           <span className="text-sm text-gray-600 cursor-pointer">
             more →
           </span>
@@ -59,9 +79,9 @@ export default async function CategoryPage({ params }: PageProps) {
             <div className="md:col-span-2 bg-[#e9d6c7] p-4 rounded-md flex flex-col md:flex-row gap-4">
               <div className="md:w-1/2">
                 <Link href={`/${heroArticle.categorySlug}/${heroArticle.slug}`}>
-                  <h3 className="text-xl font-bold leading-snug mb-2 hover:text-red-700 transition">
+                  <h2 className="text-xl font-bold leading-snug mb-2 hover:text-red-700 transition">
                     {heroArticle.title}
-                  </h3>
+                  </h2>
                 </Link>
                 <p className="text-xs text-gray-700 italic">
                   {heroArticle.readTime || '3 min read'}
@@ -104,7 +124,7 @@ export default async function CategoryPage({ params }: PageProps) {
               className="flex gap-3 border-b pb-4 hover:text-red-700 transition"
             >
               <div className="flex-1">
-                <h4 className="font-semibold leading-snug">{item.title}</h4>
+                <h3 className="font-semibold leading-snug">{item.title}</h3>
                 <p className="text-xs text-gray-600 mt-1">
                   {item.readTime || '2 min read'}
                 </p>

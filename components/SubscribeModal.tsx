@@ -167,7 +167,7 @@ export default function SubscribeModal({ isOpen, onClose }: SubscribeModalProps)
               Login Required
             </h2>
             <p style={{ fontSize: '14px', color: '#4b5563', lineHeight: 1.5, margin: '0 0 24px' }}>
-              Only registered members can subscribe to Business Standard newsletters. Please log in or create an account to proceed.
+              Only registered members can subscribe to Financial Journal newsletters. Please log in or create an account to proceed.
             </p>
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
               <Link
@@ -215,7 +215,7 @@ export default function SubscribeModal({ isOpen, onClose }: SubscribeModalProps)
               Subscription Successful!
             </h3>
             <p style={{ fontSize: '13px', color: '#6b7280', margin: '0 0 24px' }}>
-              Welcome to Business Standard. Look out for our briefings at <strong>{user.email}</strong>.
+              Welcome to Financial Journal. Look out for our briefings at <strong>{user.email}</strong>.
             </p>
             <button
               onClick={handleDone}
@@ -241,7 +241,7 @@ export default function SubscribeModal({ isOpen, onClose }: SubscribeModalProps)
                 Active Subscriber
               </span>
               <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '24px', fontWeight: 700, color: '#111827', margin: '12px 0 6px' }}>
-                Business Standard Newsletter
+                Financial Journal Newsletter
               </h2>
               <p style={{ fontSize: '13px', color: '#4b5563', margin: 0 }}>
                 Signed in as <strong>{user.username}</strong> ({user.email})
@@ -302,7 +302,7 @@ export default function SubscribeModal({ isOpen, onClose }: SubscribeModalProps)
                 </span>
               </div>
               <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '28px', fontWeight: 700, color: '#b91c1c', margin: '0 0 6px' }}>
-                Business Standard
+                Financial Journal
               </h2>
               <p style={{ fontSize: '13px', color: '#6b7280', lineHeight: 1.5, margin: 0 }}>
                 The most important business, finance and market news — free in your inbox.

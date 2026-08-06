@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
 
     if (isSubscribed(user.email)) {
       return NextResponse.json({
-        message: 'You are already subscribed to Business Standard newsletter.',
+        message: 'You are already subscribed to Financial Journal newsletter.',
         isSubscribed: true
       }, { status: 409 });
     }
@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: 'Subscription successful! Welcome to Business Standard newsletter.',
+      message: 'Subscription successful! Welcome to Financial Journal newsletter.',
       isSubscribed: true
     });
   } catch (error: any) {

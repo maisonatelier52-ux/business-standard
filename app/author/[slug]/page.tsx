@@ -8,14 +8,36 @@ interface PageProps {
   }>;
 }
 
+const SITE_URL = 'https://www.financial-journal.xyz';
+const SITE_NAME = 'Financial Journal';
+
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const author = getAuthorBySlug(slug);
   if (!author) return {};
 
+  const title = `${author.name} - Author Profile`;
+  const description = `Articles and reporting by ${author.name}, ${author.role}.`;
+  const url = `${SITE_URL}/author/${author.slug}`;
+
   return {
-    title: `${author.name} - Author Profile | Business Standard`,
-    description: `Articles and reporting by ${author.name}, ${author.role}.`,
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${title} | ${SITE_NAME}`,
+      description,
+      url,
+      siteName: SITE_NAME,
+      type: 'profile',
+      images: author.avatar ? [{ url: author.avatar, alt: author.name }] : undefined,
+    },
+    twitter: {
+      card: 'summary',
+      title: `${title} | ${SITE_NAME}`,
+      description,
+      images: author.avatar ? [author.avatar] : undefined,
+    },
   };
 }
 
@@ -103,7 +125,7 @@ export default async function AuthorPage({ params }: PageProps) {
 
         {/* Bio Box */}
         <div className="mt-4 bg-gray-50 border rounded p-4 text-sm text-gray-700 leading-relaxed">
-          Specialist in business, finance, and economic reporting for Business Standard across international markets.
+          Specialist in business, finance, and economic reporting for Financial Journal across international markets.
         </div>
 
         {/* Stats */}

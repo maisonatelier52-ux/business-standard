@@ -63,12 +63,12 @@ export default function SignupPage() {
         <div className="text-center mb-8">
           <Link href="/">
             <h1 className="text-3xl font-bold logo-font text-red-700 mb-2">
-              Business Standard
+              Financial Journal
             </h1>
           </Link>
           <h2 className="text-xl font-bold text-gray-900">Create your account</h2>
           <p className="text-sm text-gray-500 mt-1">
-            Join Business Standard to participate in discussions & subscribe
+            Join Financial Journal to participate in discussions & subscribe
           </p>
         </div>
 

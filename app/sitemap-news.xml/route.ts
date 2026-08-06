@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { getAllArticles } from '@/lib/db';
 
 export async function GET() {
-  const baseUrl = 'https://latinherald.com';
+  const baseUrl = 'https://www.financial-journal.xyz';
   const articles = getAllArticles().slice(0, 10);
 
   const urls = articles.map(art => `
@@ -10,7 +10,7 @@ export async function GET() {
     <loc>${baseUrl}/${art.categorySlug}/${art.slug}</loc>
     <news:news xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
       <news:publication>
-        <news:name>Business Standard</news:name>
+        <news:name>Financial Journal</news:name>
         <news:language>es</news:language>
       </news:publication>
       <news:publication_date>${new Date(art.publishedDate || Date.now()).toISOString()}</news:publication_date>

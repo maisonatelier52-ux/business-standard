@@ -128,11 +128,12 @@ export default function Header({ categories = [], currentLang = 'en' }: HeaderPr
               <span className="w-6 h-[2px] bg-black"></span>
             </div>
 
-            {/* Centered Logo - Updated to Financial Journal */}
+            {/* Centered Logo - site-wide brand mark (kept as non-heading so each
+                page's own <h1> remains the single, unique H1 for SEO) */}
             <Link href="/" title="Financial Journal - The Leading Business Journal">
-              <h1 className="absolute left-1/2 -translate-x-1/2 top-2 md:top-1 text-red-700 text-2xl md:text-5xl logo-font font-bold whitespace-nowrap">
+              <p className="absolute left-1/2 -translate-x-1/2 top-2 md:top-1 text-red-700 text-2xl md:text-5xl logo-font font-bold whitespace-nowrap">
                 Financial Journal
-              </h1>
+              </p>
             </Link>
 
             {/* Right Search Toggle Button */}

@@ -95,6 +95,10 @@ export default function HomePage() {
 
   return (
     <main>
+      {/* SEO: page needs exactly one H1. The visual header logo is a <p>,
+          so this hidden H1 supplies the homepage's unique heading. */}
+      <h1 className="sr-only">Financial Journal — Business, Markets & Economy News</h1>
+
       {/* ── SECTION 1: ECONOMY HERO ── */}
       <section className="border border-gray-300 mt-6">
         <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-6">
@@ -153,7 +157,7 @@ export default function HomePage() {
 
       {/* Sub-banner lead line */}
       <p className="text-xs text-gray-400 text-center mt-2 mb-0">
-        Business Standard — your leading business journal in markets, economy, companies, and more.
+        Financial Journal — your leading business journal in markets, economy, companies, and more.
       </p>
 
       {/* ── SECTION 2: TOP NEWS ── */}

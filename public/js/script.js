@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   Business Standard — Main JavaScript
+   Financial Journal — Main JavaScript
    NOTE: Subscribe modal logic is self-contained in header.blade.php
          Footer subscribe form is handled here.
 ═══════════════════════════════════════════════════════════════ */
@@ -53,7 +53,7 @@
               '</svg>' +
               (data.message || 'Thank you for subscribing!') +
               '</div>' +
-              '<p style="color:rgba(255,255,255,.7); font-size:13px; margin:4px 0 0;">Welcome to Business Standard. Check your inbox!</p>' +
+              '<p style="color:rgba(255,255,255,.7); font-size:13px; margin:4px 0 0;">Welcome to Financial Journal. Check your inbox!</p>' +
               '</div>';
           }
         } else if (res.status === 409) {

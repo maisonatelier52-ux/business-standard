@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const baseUrl = 'https://latinherald.com';
+  const baseUrl = 'https://www.financial-journal.xyz';
   const pages = ['', '/about', '/our-team', '/privacy-policy', '/terms-and-conditions'];
 
   const urls = pages.map(p => `

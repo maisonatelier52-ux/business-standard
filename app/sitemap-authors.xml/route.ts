@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { getAllAuthors } from '@/lib/db';
 
 export async function GET() {
-  const baseUrl = 'https://latinherald.com';
+  const baseUrl = 'https://www.financial-journal.xyz';
   const authors = getAllAuthors();
 
   const urls = authors.map(auth => `

@@ -7,10 +7,29 @@ interface PageProps {
   }>;
 }
 
+const SITE_NAME = 'Financial Journal';
+
 export async function generateMetadata({ searchParams }: PageProps) {
   const { q } = await searchParams;
+  const title = q ? `Search results for "${q}"` : 'Search News';
+  const description = q
+    ? `Search results for "${q}" on ${SITE_NAME}.`
+    : `Search the latest business, markets and economy news on ${SITE_NAME}.`;
+
   return {
-    title: q ? `Search results for "${q}" | Business Standard` : 'Search News | Business Standard',
+    title,
+    description,
+    robots: { index: false, follow: true }, // search result pages shouldn't be indexed
+    openGraph: {
+      title: `${title} | ${SITE_NAME}`,
+      description,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | ${SITE_NAME}`,
+      description,
+    },
   };
 }
 
@@ -24,7 +43,7 @@ export default async function SearchPage({ searchParams }: PageProps) {
       {/* Header */}
       <div className="border-b-2 border-red-700 pb-4 mb-8">
         <h1 className="text-3xl font-bold font-serif text-gray-900">
-          {query ? `Search Results for "${query}"` : 'Search Business Standard'}
+          {query ? `Search Results for "${query}"` : 'Search Financial Journal'}
         </h1>
         <p className="text-sm text-gray-500 mt-1">
           Found {results.length} matching articles

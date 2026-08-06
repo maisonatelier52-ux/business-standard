@@ -87,7 +87,7 @@ export default function ArticleComments({ articleSlug, initialComments }: Props)
           </div>
           <h4 className="font-bold text-lg text-gray-900">Join the Conversation</h4>
           <p className="text-sm text-gray-600 max-w-md mx-auto">
-            Only logged in members can leave comments on Business Standard articles. Please log in or create an account to share your thoughts.
+            Only logged in members can leave comments on Financial Journal articles. Please log in or create an account to share your thoughts.
           </p>
           <div className="flex items-center justify-center gap-3 pt-2">
             <Link
