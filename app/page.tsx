@@ -52,7 +52,7 @@ export default function HomePage() {
   const mainNewsRight = mainNewsList[5];
 
   // ── Section 3: Special Coverage (4 categories) ──
-  const specialCatSlugs = ['politics', 'sports', 'economy', 'tourism'];
+  const specialCatSlugs = ['politics', 'sports', 'economy', 'health'];
 
   // ── Section 4: Latest News ──
   const ultimasCol1 = getUnused(7);
