@@ -135,8 +135,8 @@ export default function HomePage() {
             </div>
 
             <div className="w-full md:w-[260px] shrink-0">
-              <p className="text-sm text-gray-600 mb-2 text-right md:text-left">Advertisement</p>
-              <img src="/images/ads1.webp" className="w-full h-[250px] object-cover border" alt="Advertisement" />
+              <p className="text-xs text-gray-600 mb-2 text-right md:text-left">Advertisement</p>
+              <img src="/images/ads1.webp" className="w-full h-[330px] sm:h-[250px] object-cover border" alt="Advertisement" />
             </div>
           </div>
 
@@ -199,8 +199,8 @@ export default function HomePage() {
 
             <div className="space-y-6">
               <div>
-                <p className="text-sm text-gray-600 mb-2">Advertisement</p>
-                <img src="/images/ads2.webp" className="w-full h-[220px] object-cover border" alt="Advertisement" />
+                <p className="text-xs text-gray-600 mb-2">Advertisement</p>
+                <img src="/images/ads2.webp" className="w-full h-[320px] sm:h-[290px] object-cover border" alt="Advertisement" />
               </div>
               {mainNewsRight && (
                 <div className="border-t pt-4">
@@ -314,7 +314,7 @@ export default function HomePage() {
             </div>
 
             <div className="hidden md:block">
-              <p className="text-sm text-gray-600 mb-2">Advertisement</p>
+              <p className="text-xs text-gray-600 mb-2">Advertisement</p>
               <img src="/images/ads3.webp" className="w-full h-[600px] object-cover border rounded" alt="Advertisement" />
             </div>
           </div>

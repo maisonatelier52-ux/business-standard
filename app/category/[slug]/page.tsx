@@ -106,9 +106,9 @@ export default async function CategoryPage({ params }: PageProps) {
           )}
 
           <div className="hidden md:block">
-            <p className="text-sm text-gray-500 mb-2">Advertisement</p>
+            <p className="text-xs text-gray-500 mb-2">Advertisement</p>
             <img
-              src="/images/ad.webp"
+              src="/images/ads2.webp"
               className="w-full h-[250px] object-cover rounded"
               alt="Advertisement"
             />
