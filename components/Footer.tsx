@@ -53,23 +53,51 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+       {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left mt-6 gap-4 border-t pt-4">
           <p className="text-xs text-black">
             Copyright © {new Date().getFullYear()} Financial Journal. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <a href="#" aria-label="Facebook">
-              <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" className="w-6 h-6" alt="Facebook" />
+            <a
+              href="https://substack.com/@financialjournal24"
+              aria-label="Substack"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="https://cdn.simpleicons.org/substack" className="w-6 h-6" alt="Substack" />
             </a>
-            <a href="#" aria-label="Twitter">
-              <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" className="w-6 h-6" alt="Twitter" />
+            <a
+              href="https://www.reddit.com/user/financial_journal_24/"
+              aria-label="Reddit"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="https://cdn.simpleicons.org/reddit" className="w-6 h-6" alt="Reddit" />
             </a>
-            <a href="https://www.instagram.com/financial_journal_24/?utm_source=ig_web_button_share_sheet" aria-label="Instagram">
+            <a
+              href="https://medium.com/@financialjournal24"
+              aria-label="Medium"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="https://cdn.simpleicons.org/medium" className="w-6 h-6" alt="Medium" />
+            </a>
+            <a
+              href="https://www.instagram.com/financial_journal_24"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" className="w-6 h-6" alt="Instagram" />
             </a>
-            <a href="#" aria-label="LinkedIn">
-              <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" className="w-6 h-6" alt="LinkedIn" />
+            <a
+              href="https://x.com/Finjournal24"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="https://cdn.simpleicons.org/x" className="w-6 h-6" alt="Twitter" />
             </a>
           </div>
         </div>
