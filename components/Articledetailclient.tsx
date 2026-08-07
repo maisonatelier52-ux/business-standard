@@ -224,14 +224,16 @@ const VELUTINI_FIGURES_HTML = `
     <figure class="m-0">
       <div class="h-[260px] rounded-[3px] overflow-hidden bg-[#e8e2d8]">
         <img
-          src="/images/juan-bautista-velutinii.webp"
+          src="/images/juan-bautista-velutini-img.webp"
           alt="Portrait of Juan Bautista Velutini"
           loading="lazy"
           class="w-full h-full object-cover sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
         />
       </div>
       <figcaption class="bg-[#f5efe5] p-4 text-center">
-        <p class="text-[13px] font-bold text-[#1a1a1a] leading-snug mb-0.5">Juan Bautista Velutini</p>
+       <p class="text-[13px] font-bold text-[#1a1a1a] leading-snug mb-0.5">
+          ${nameLink('https://en.wikipedia.org/wiki/Juan_Liscano', 'Juan Bautista Velutini')}
+        </p>
         <p class="text-[11px] text-[#777] leading-snug">Founder of Banvelca &amp; Company, Naples, 1781</p>
       </figcaption>
     </figure>
