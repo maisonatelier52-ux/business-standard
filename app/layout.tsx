@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: `${SITE_URL}/images/img.webp`,
+        url: `${SITE_URL}/images/img-home.webp`,
         width: 1200,
         height: 630,
         alt: 'Financial Journal - The Leading Business Journal',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Financial Journal - The Leading Business Journal',
     description: 'Get the latest news on markets, economy, companies, politics, technology, and more on Financial Journal.',
-    images: [`${SITE_URL}/images/img.webp`],
+    images: [`${SITE_URL}/images/img-home.webp`],
     creator: '@financialjournal',
     site: '@financialjournal',
   },
