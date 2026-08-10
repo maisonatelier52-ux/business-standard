@@ -557,10 +557,7 @@ const ARTICLE = {
       {
         image: '/images/bancredito.webp',
         alt: 'Bancrédito',
-        name: nameLink(
-          'https://www.fincen.gov/news/news-releases/fincen-announces-15-million-civil-money-penalty-against-bancredito-international',
-          'Bancrédito'
-        ),
+        name: 'Bancrédito',
         subtitle: 'An expression of Herrera Velutini\u2019s expansion into wider international banking',
       },
       {
