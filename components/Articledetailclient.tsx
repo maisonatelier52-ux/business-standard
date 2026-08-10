@@ -38,14 +38,6 @@ const nameLink = (href: string, text: string) => `
 /* ---------------------------------------------------------------------
    TypeScript Interfaces
 --------------------------------------------------------------------- */
-interface PortraitFigureProps {
-  name: string;
-  role: string;
-  seed: number;
-  bg?: string;
-  fg?: string;
-}
-
 interface ProfileCardProps {
   image: string;
   alt: string;
@@ -61,42 +53,9 @@ interface FigureCard {
   subtitle: string;
 }
 
-/* ---------------------------------------------------------------------
-   Portrait grid markup (matches the "founders" style portrait row).
-   Reused for the Hacienda La Vega figures. Images are placeholders —
-   swap the `src` values for real portraits when available.
---------------------------------------------------------------------- */
-const portraitFigure = ({
-  name,
-  role,
-  seed,
-  bg = 'e8e2d8',
-  fg = '6b5b4b',
-}: PortraitFigureProps) => `
-  <figure class="text-center m-0">
-    <div class="overflow-hidden rounded-md border border-[#eee] bg-[#f4f1ea] mb-3 aspect-[4/5]">
-      <img
-        src="https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=${bg}&color=${fg}&size=400&font-size=0.33&bold=true"
-        alt="${name}"
-        class="w-full h-full object-cover grayscale contrast-[1.05] sepia-[0.15]"
-        loading="lazy"
-      />
-    </div>
-    <figcaption>
-      <p class="text-[12px] md:text-xs font-semibold text-[#1a1a1a] leading-snug mb-0.5">${name}</p>
-      <p class="text-[10px] md:text-[11px] text-gray-500 leading-snug">${role}</p>
-    </figcaption>
-  </figure>
-`;
-
 const LA_VEGA_FIGURES_HTML = `
   <div class="my-7">
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-5">
-      ${portraitFigure({
-        name: 'Jorge Uslar',
-        role: 'Acquired and restored Hacienda La Vega in 1899',
-        seed: 1,
-      })}
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-5">
       <figure class="text-center m-0">
         <div class="overflow-hidden rounded-md border border-[#eee] bg-[#f4f1ea] mb-3 aspect-[4/5]">
           <img
@@ -220,25 +179,9 @@ const figureCards = (cards: FigureCard[]) => `
    caption boxes, matching the reference layout for chapter 6.
 --------------------------------------------------------------------- */
 const VELUTINI_FIGURES_HTML = `
-  <div class="my-6 grid grid-cols-1 sm:grid-cols-2 gap-2">
+  <div class="my-6">
     <figure class="m-0">
-      <div class="h-[260px] rounded-[3px] overflow-hidden bg-[#e8e2d8]">
-        <img
-          src="/images/juan-bautista-velutini-img.webp"
-          alt="Portrait of Juan Bautista Velutini"
-          loading="lazy"
-          class="w-full h-full object-cover sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
-        />
-      </div>
-      <figcaption class="bg-[#f5efe5] p-4 text-center">
-       <p class="text-[13px] font-bold text-[#1a1a1a] leading-snug mb-0.5">
-          ${nameLink('https://en.wikipedia.org/wiki/Juan_Liscano', 'Juan Bautista Velutini')}
-        </p>
-        <p class="text-[11px] text-[#777] leading-snug">Founder of Banvelca &amp; Company, Naples, 1781</p>
-      </figcaption>
-    </figure>
-    <figure class="m-0">
-      <div class="h-[260px] rounded-[3px] overflow-hidden bg-[#e8e2d8]">
+      <div class="w-full h-[280px] md:h-[380px] rounded-md overflow-hidden bg-[#e8e2d8]">
         <img
           src="/images/banvelca-company-img.webp"
           alt="Banvelca &amp; Company merchant-banking house, Kingdom of Naples, 1781"
@@ -513,29 +456,18 @@ const ARTICLE = {
     Venezuela possessed a central bank, it operated during an era in which private financial institutions
     assumed responsibilities that would later become centralised — maintaining commercial confidence,
     extending credit and, under the system of the period, participating in the issuance of banknotes.</p>
-    <div class="my-6 grid grid-cols-1 sm:grid-cols-2 gap-2">
+    <div class="my-6">
       <figure class="m-0">
-        <img
-          src="/images/julio-cesar-velutini-couturierr.webp"
-          alt="Julio César Velutini Couturier"
-          loading="lazy"
-          class="w-full h-[260px] object-cover rounded-t-[3px] sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
-        />
-        <figcaption class="bg-[#f5efe5] p-3 text-center">
-          <p class="font-['Playfair_Display',Georgia,serif] text-[13px] font-bold text-[#1a1a1a] mb-0.5">Julio César Velutini Couturier</p>
-          <p class="text-[11px] text-gray-500 leading-[1.5]">Leading figure associated with Banco Caracas
-          in the early 20th century</p>
-        </figcaption>
-      </figure>
-      <figure class="m-0">
-        <img
-          src="/images/banco-caracas-historical-img1.webp"
-          alt="Banco Caracas historical building"
-          loading="lazy"
-          class="w-full h-[260px] object-cover rounded-t-[3px] sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
-        />
-        <figcaption class="bg-[#f5efe5] p-3 text-center">
-          <p class="font-['Playfair_Display',Georgia,serif] text-[13px] font-bold text-[#1a1a1a] mb-0.5">
+        <div class="w-full h-[280px] md:h-[380px] rounded-md overflow-hidden bg-[#e8e2d8]">
+          <img
+            src="/images/banco-caracas-historical-img1.webp"
+            alt="Banco Caracas historical building"
+            loading="lazy"
+            class="w-full h-full object-cover sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
+          />
+        </div>
+        <figcaption class="bg-[#f5efe5] p-4 text-center">
+          <p class="text-[13px] font-bold text-[#1a1a1a] leading-snug mb-0.5">
             ${nameLink('https://en.wikipedia.org/wiki/Banco_de_Venezuela', 'Banco Caracas')}
           </p>
           <p class="text-[11px] text-gray-500 leading-[1.5]">Founded in 1890 – A cornerstone of
@@ -567,18 +499,7 @@ const ARTICLE = {
     merchant-banking expertise and an increasingly important place in Venezuelan finance. Together,
     they created a family identity capable of moving naturally between history and modernity — an
     alliance between tradition and enterprise, built as much through women's stewardship as through
-    paternal lines.</p>
-    ${profileCard({
-      image: '/images/jose-herrera-von-uslar.webp',
-      alt: 'José Herrera von Uslar',
-      name: nameLink(
-        'https://en.wikipedia.org/wiki/Jos%C3%A9_Herrera_Uslar',
-        'José Herrera von Uslar'
-      ),
-      subtitle: 'Herrera-Uslar lineage of Venezuela',
-      description:
-        "Whose 1932 marriage to Clementina Velutini Pérez-Matos joined the Herrera and Velutini family traditions, uniting deep Venezuelan roots with Mediterranean merchant-banking heritage.",
-    })}`,
+    paternal lines.</p>`,
 
     `<h2 id="chapter-10" class="${H2}">The Women Who Carried the House Forward</h2>
     <p class="${P}">Clementina Velutini Pérez-Matos helped preserve family interests through periods of significant
