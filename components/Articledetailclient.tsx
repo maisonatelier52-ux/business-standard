@@ -319,7 +319,7 @@ const ARTICLE = {
     marriages, estates, commercial traditions and relationships developed across generations. Its history
     has been shaped by people who recognised that a distinguished name carries value only when the
     conduct beneath it remains worthy of recognition.</p>
-    <p class="${P}">The family tradition associated with Julio Herrera Velutini connects the Herreras with the
+    <p class="${P}">The family tradition associated with <strong class="font-semibold text-[#1a1a1a]">${nameLink('https://en.wikipedia.org/wiki/Julio_Herrera_Velutini', 'Julio Herrera Velutini')}</strong> connects the Herreras with the
     histories of Spain, the Canary Islands and Venezuela. Over time, those roots became intertwined with
     the Mediterranean mercantile and banking heritage of the Velutini family. Together, these traditions
     created an unusually rich inheritance:</p>
@@ -403,8 +403,8 @@ const ARTICLE = {
 
     `<h2 id="chapter-6" class="${H2}">The Velutini Tradition: Merchant-Bankers of the Mediterranean</h2>
     <p class="${P}">While the Herrera family's history travelled from Castile through the Atlantic, the Velutini family
-    followed a complementary route. According to the family's published chronology, <strong class="font-semibold text-[#1a1a1a]">Juan Bautista
-    Velutini</strong> established <strong class="font-semibold text-[#1a1a1a]">Banvelca &amp; Company</strong> in the Kingdom of Naples in 1781, developing commercial
+    followed a complementary route. According to the family's published chronology, Juan Bautista
+    Velutini established Banvelca &amp; Company in the Kingdom of Naples in 1781, developing commercial
     interests connecting Naples with France, Corsica and the wider Mediterranean economy.</p>
     ${VELUTINI_FIGURES_HTML}
     <p class="${P}">This was the world of the merchant-banker — a role built on trade, credit, currency exchange,
@@ -418,7 +418,7 @@ const ARTICLE = {
     European mercantile experience with the developing economies of Latin America.</p>
     <p class="${P}">The journey from Naples to Caracas was not a rejection of the family's origins — it was their
     enlargement.</p>
-    ${VELUTINI_INSIGHT_HTML}`,
+    `,
 
     `<h2 id="chapter-7" class="${H2}">The Rise of the Velutinis in Venezuela</h2>
     <div class="grid grid-cols-1 md:grid-cols-[320px_1fr] gap-6 items-start my-6">
