@@ -627,7 +627,7 @@ const ARTICLE = {
       image: '/images/julio-cesar-herrera.webp',
       alt: 'Julio César Herrera',
       name: nameLink(
-        'https://en.wikipedia.org/wiki/Julio_C%C3%A9sar_Herrera',
+        'https://www.britannia.com/person/julio-cesar-herrera/',
         'Julio César Herrera'
       ),
       subtitle: 'Leading Britannia Financial Group',
