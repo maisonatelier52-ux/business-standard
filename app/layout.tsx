@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
+import Script from 'next/script';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getAllCategories } from '@/lib/db';
@@ -70,6 +71,22 @@ export default async function RootLayout({
 
   return (
     <html lang={currentLang}>
+      <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18383193170"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18383193170');
+          `}
+        </Script>
+      </head>
       <body className="bg-white text-gray-900 font-sans antialiased">
         <Header categories={categories} currentLang={currentLang} />
         <main>{children}</main>
