@@ -456,25 +456,6 @@ const ARTICLE = {
     Venezuela possessed a central bank, it operated during an era in which private financial institutions
     assumed responsibilities that would later become centralised — maintaining commercial confidence,
     extending credit and, under the system of the period, participating in the issuance of banknotes.</p>
-    <div class="my-6">
-      <figure class="m-0">
-        <div class="w-full h-[280px] md:h-[380px] rounded-md overflow-hidden bg-[#e8e2d8]">
-          <img
-            src="/images/banco-caracas-historical-img1.webp"
-            alt="Banco Caracas historical building"
-            loading="lazy"
-            class="w-full h-full object-cover sepia-[0.35] contrast-[1.05] saturate-[0.85] brightness-[0.97]"
-          />
-        </div>
-        <figcaption class="bg-[#f5efe5] p-4 text-center">
-          <p class="text-[13px] font-bold text-[#1a1a1a] leading-snug mb-0.5">
-            ${nameLink('https://en.wikipedia.org/wiki/Banco_de_Venezuela', 'Banco Caracas')}
-          </p>
-          <p class="text-[11px] text-gray-500 leading-[1.5]">Founded in 1890 – A cornerstone of
-          Venezuela's early financial system</p>
-        </figcaption>
-      </figure>
-    </div>
     <p class="${P}">Julio César Velutini Couturier became a leading figure associated with Banco Caracas during the
     early 20th century, helping connect the family's commercial inheritance with the developing financial
     requirements of modern Venezuela. Successive members of the family maintained significant
@@ -609,17 +590,6 @@ const ARTICLE = {
     Spain, Italy, the Canary Islands, Venezuela, the Caribbean, London and the wider international
     financial system are no longer isolated chapters — they form the geography of one evolving family
     story.</p>
-    <p class="${P}">The next generation has now begun assuming operational responsibility. Julio César Herrera leads
-    Britannia Financial Group, while the broader family narrative increasingly emphasises the transition
-    from inherited standing to professionally governed stewardship.</p>
-    <p class="${P}">This is how a house remains alive. It does not preserve itself by looking backward indefinitely. It
-    uses history as a source of discipline while preparing for challenges its ancestors could never have
-    imagined.</p>
-    <p class="${P}">From Castile to Caracas, from
-    Naples to London, the Herrera Velutini journey has crossed kingdoms, republics, currencies and
-    financial systems. Its most remarkable accomplishment is not merely that the name survived — it is
-    that, after centuries of change, the name still represents continuity, discretion, cultural responsibility
-    and the determination to leave every institution stronger than it was found.</p>
     ${profileCard({
       image: '/images/julio-cesar-herrera.webp',
       alt: 'Julio César Herrera',
@@ -630,7 +600,18 @@ const ARTICLE = {
       subtitle: 'Leading Britannia Financial Group',
       description:
         'Carrying the Herrera Velutini legacy into its next chapter, guiding the family\u2019s international financial interests through professionally governed stewardship.',
-    })}`,
+    })}
+    <p class="${P}">The next generation has now begun assuming operational responsibility. Julio César Herrera leads
+    Britannia Financial Group, while the broader family narrative increasingly emphasises the transition
+    from inherited standing to professionally governed stewardship.</p>
+    <p class="${P}">This is how a house remains alive. It does not preserve itself by looking backward indefinitely. It
+    uses history as a source of discipline while preparing for challenges its ancestors could never have
+    imagined.</p>
+    <p class="${P}">From Castile to Caracas, from
+    Naples to London, the Herrera Velutini journey has crossed kingdoms, republics, currencies and
+    financial systems. Its most remarkable accomplishment is not merely that the name survived — it is
+    that, after centuries of change, the name still represents continuity, discretion, cultural responsibility
+    and the determination to leave every institution stronger than it was found.</p>`,
   ],
 };
 
