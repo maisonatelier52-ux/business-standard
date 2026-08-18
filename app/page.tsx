@@ -614,7 +614,7 @@ export default function HomePage() {
                   <h3 className="font-bold text-lg">Top Authors</h3>
                 </div>
                 <div className="space-y-3 text-sm">
-                  {authors.map((auth) => (
+                  {authors.slice(0, 7).map((auth) => (
                     <Link
                       key={auth.slug}
                       href={`/author/${auth.slug}`}
