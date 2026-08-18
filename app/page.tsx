@@ -55,8 +55,8 @@ export default function HomePage() {
 
   // ── Section 2: Top News (Fixed House of Herrera hero) ──
   const mainNewsHero = fixedTopNews || getUnused(1)[0];
-  const mainNewsMiddle = getUnused(4);
-  const mainNewsRight = getUnused(1)[0];
+  const mainNewsMiddle = getUnused(5);
+  // const mainNewsRight = getUnused(1)[0];
 
   // ── Section 3: Special Coverage (4 categories) ──
   const specialCatSlugs = ['politics', 'sports', 'economy', 'health'];
@@ -66,9 +66,9 @@ export default function HomePage() {
   }));
 
   // ── Section 4: Latest News ──
-  const ultimasCol1 = getUnused(7);
+  const ultimasCol1 = getUnused(8);
   const ultimasCol2Main = getUnused(1)[0];
-  const ultimasCol2List = getUnused(3);
+  const ultimasCol2List = getUnused(4);
 
   // ── Section 5: Highlights ──
   const destacadosList = getUnused(3);
@@ -110,8 +110,8 @@ export default function HomePage() {
   const reportesList1 = getUnused(4);
   const reportesList2 = getUnused(4);
 
-  // ── Section 13: People ──
-  const personasArticles = getUnused(3);
+  // // ── Section 13: People ──
+  // const personasArticles = getUnused(3);
 
   return (
     <main>
@@ -222,7 +222,7 @@ export default function HomePage() {
                   <p className="text-xs text-gray-600 mb-2">Advertisement</p>
                   <img src="/images/ads2.webp" className="w-full h-[320px] sm:h-[290px] object-cover border" alt="Advertisement" />
                 </div>
-                {mainNewsRight && (
+                {/* {mainNewsRight && (
                   <div className="border-t pt-4">
                     <Link
                       href={`/${mainNewsRight.categorySlug}/${mainNewsRight.slug}`}
@@ -232,7 +232,7 @@ export default function HomePage() {
                       <span className="text-xs text-gray-500">{mainNewsRight.readTime || '2 min read'}</span>
                     </Link>
                   </div>
-                )}
+                )} */}
               </div>
             </div>
           </div>
@@ -762,7 +762,7 @@ export default function HomePage() {
         </section>
 
         {/* ── SECTION 13: PEOPLE ── */}
-        <section className="mt-10 border-t-4 pt-4 mb-10">
+        {/* <section className="mt-10 border-t-4 pt-4 mb-10">
           <div className="max-w-[1200px] mx-auto px-4 md:px-6">
             <div className="flex justify-between items-center mb-6">
               <div>
@@ -792,7 +792,7 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
     </main>
   );
